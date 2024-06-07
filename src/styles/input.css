@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .header-navbar {
+    @apply absolute md:static md:flex md:items-center  md:max-w-[1280px] md:justify-center h-full opacity-0  md:opacity-100 duration-500 bg-primary/80;
+  }
+}
