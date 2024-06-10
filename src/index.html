@@ -28,10 +28,10 @@
     <script src="./index.js"></script>
     <title>Raccon Services</title>
   </head>
-  <body class="bg-primary">
-    <header>
+  <body class="bg-primary flex flex-col">
+    <header class="md:absolute left-0 w-full z-[1000]">
       <div
-        class="header-wrapper md:container md:w-[90%] md:mx-auto xl:max-w-[1020px] flex justify-between text-white h-[150px] min-w-[385px]"
+        class="header-wrapper md:container md:w-[90%] md:mx-auto xl:max-w-[1280px] flex justify-between text-white h-[150px] min-w-[385px]"
       >
         <div class="header-logo min-w-[140px] max-w-[140px] ml-4 mt-4">
           <a href="./index.html" class="w-full">
@@ -43,7 +43,7 @@
           </a>
         </div>
         <nav
-          class="header-navbar bottom-[-100%] md:bottom-0 z-[5] md:bg-transparent"
+          class="header-navbar bottom-[-100%] md:bottom-0 z-[5] md:bg-transparent md:justify-end"
           id="navbar"
         >
           <ul
@@ -60,15 +60,15 @@
               </div>
 
               <ul
-                class="drop-list md:absolute md:bg-secondary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
               >
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-primary duration-500"
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
                 >
                   <a href="" class="">Contas Ranqueadas</a>
                 </li>
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-primary duration-500 mt-10 md:mt-0"
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
                 >
                   <a href="" class="">Contas Unranked</a>
                 </li>
@@ -94,14 +94,14 @@
         ></ion-icon>
       </div>
     </header>
-    <section class="main text-white relative">
+    <section class="main text-white relative pt-150px">
       <div
-        class="main-bg__mob block bottom-[-490px] md:bottom-[-290px] left-0 pointer-events-none absolute overflow-hidden max-w-[360px] min-w-[360px] md:left-auto md:right-0 md:scale-x-[-1]"
+        class="main-bg__mob block bottom-[-400px] md:bottom-[-250px] lg:bottom-[-60px] lg:right-[55px] lg:left-auto left-0 pointer-events-none absolute overflow-hidden max-w-[360px] min-w-[360px] md:left-auto md:right-0 md:scale-x-[-1] lg:scale-y-[1.3] lg:scale-x-[-1.3] z-[0] max-h-[350px]"
       >
-        <img src="../assets/main-mob.webp" alt="" />
+        <img src="../assets/main-mob.webp" class="overflow-hidden object-fill" alt="" />
       </div>
       <div
-        class="main-wrapper md:min-w-[auto] xl:min-h-[600px] 2xl:min-h-[800px] max-w-[1280px] mx-auto w-[90%] h-full pt-[100px]"
+        class="main-wrapper md:min-w-[auto] xl:min-h-[600px] 2xl:min-h-[800px] max-w-[1280px] mx-auto w-[90%] h-full pt-[100px] md:pt-[250px]"
       >
         <div
           class="main-wrapper-info h-full flex flex-col gap-3 min-w-[360px] w-full"
@@ -112,7 +112,7 @@
           >
 
           <h1
-            class="main-wrapper-info__title text-[40px] leading[54px] font-extrabold max-w-[700px] md:text-6xl"
+            class="main-wrapper-info__title text-[40px] leading[54px] font-extrabold max-w-[800px] md:text-6xl z-10"
           >
             <span
               class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] text-transparent bg-clip-text"
@@ -120,7 +120,7 @@
             >
             para comprar sua conta smurf
           </h1>
-          <div class="main-wrapper-info__tb mt-9">
+          <div class="main-wrapper-info__tb mt-9 font-semibold md:text-xl lg:text-2xl" >
             <ul class="flex">
               <li>
                 <a
@@ -143,10 +143,69 @@
           </div>
         </div>
       </div>
-      <div
-        class="mainVideo max-w-full hidden md:block bg-contain fixed top-0 left-0 right-0 opacity-[0.3] overflow-hidden h-full w-full bg-no-repeat"
-      >
-        <video src="../assets/soraka-florescer-video.mp4" class=""></video>
+        <div
+          class="video-bg mainVideo aspect-video max-w-full hidden md:block object-cover  bg-cover absolute top-0 left-0 right-0 opacity-[0.3] overflow-hidden max-h-[700px] h-full w-full bg-no-repeat z-[-10]"
+        >
+          <video
+            muted
+            loop
+            autoplay
+            src="../assets/soraka-florescer-video.mp4"
+            class="align-middle object-top"
+          ></video>
+        </div>
+      </div>
+    </section>
+    <section class="about mt-[400px] md:mt-[200px] z-[1005] lg:mt-[60px] mb-10 light-effect h-full min-h-[800px]">
+      <div class="about-wrapper text-white w-[90%] mx-auto max-w-[1280px]">
+        <h2 class="about-title text-5xl font-bold mb-10">
+          Nós somos o <span class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] text-transparent bg-clip-text">Melhor Lugar</span> para comprar sua conta.
+        </h2>
+        <div class="about-wrapper-info flex flex-col gap-6 lg:flex-row">
+          <div class="about-wrapper-info__highlights w-full lg:flex lg:flex-col lg:w-1/2 gap-5">
+            <ul class="flex flex-wrap mt-6">
+              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
+                <ion-icon name="rocket-sharp" class="text-6xl text-secondary"></ion-icon>
+                <span class="font-extrabold">Entrega imediata 24/7</span>
+                <p>Quando você compra uma smurf conosco, ela será entregue instantaneamente por e-mail</p>
+              </li>
+              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
+                <ion-icon name="call-outline"  class="text-6xl text-secondary"></ion-icon>
+                <span class="font-extrabold">Suporte Premium</span>
+                <p>A central da Raccon Services inclui suporte 24 horas por dia, 7 dias por semana</p>
+              </li>
+              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
+                <ion-icon name="shield-half-sharp"  class="text-6xl text-secondary"></ion-icon>
+                <span class="font-extrabold">Garantia contra ban</span>
+                <p>Oferecemos garantia vitalícia e excelente suporte</p>
+              </li>
+              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
+                <ion-icon name="document-lock-outline"  class="text-6xl text-secondary"></ion-icon>
+                <span class="font-extrabold">Pagamento seguro</span>
+                <p>Nosso site é protegido pela tecnologia SSL e os métodos de pagamento são seguros</p>
+              </li>
+            </ul>
+            <a href="" class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] w-full flex items-center justify-center text-center py-2 px-12 rounded-[40px] min-h-[55px]">VEJA OS PREÇOS</a>
+          </div>
+        
+          <div class="about-wrapper-info__blocks flex flex-col justify-between lg:w-1/2">
+            <div class="about-wrapper-info__block p-10 bg-gradient-to-r from-[#230941] to-[#15082B] mb-5 mt-4 rounded-3xl">
+              <div class="mb-3">
+                <ion-icon name="prism-sharp" class="text-secondary"></ion-icon>
+                <span class="text-[17px] pl-7 font-extrabold">Por que você precisa comprar uma conta?</span>
+              </div>
+        
+              <p>Você não precisa perder tempo subindo uma conta até o nível 30. Você só precisa de alguns minutos para se preparar para partidas ranqueadas. Outra grande vantagem de comprar uma conta é o fato de tornar o jogo mil vezes mais interessante. Todos sabemos que chegar ao topo leva muito tempo</p>
+            </div>
+            <div class="about-wrapper-info__block p-10 bg-gradient-to-r from-[#230941] to-[#15082B] rounded-3xl">
+              <div class="mb-3">
+                <ion-icon name="prism-sharp" class="text-secondary"></ion-icon>
+                <span class="text-[17px] pl-7 font-extrabold">Pratique, ganhe experiência</span>
+              </div>
+              <p>Usar smurfs não tem nada a ver com trapaça. Na verdade, são uma espécie de sala de treino, onde o jogador aprimora as suas habilidades e avalia a eficácia de novas estratégias. Comprar um smurf hoje é muito simples – bastam alguns cliques</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </body>
