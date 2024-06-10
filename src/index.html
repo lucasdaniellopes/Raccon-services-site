@@ -51,11 +51,11 @@
           >
             <li
               class="drop relative group"
-              onmouseenter="changeArrow()"
-              onmouseleave="changeArrow()"
+              onmouseenter="changeArrow(this)"
+              onmouseleave="changeArrow(this)"
             >
               <div class="drop-top hidden md:flex items-center gap-3">
-                <a href="#" class="drop-top">Smurfs LoL</a>
+                <a href="#" class="drop-top">League of Legends</a>
                 <ion-icon name="caret-down" id="drop-arrow"></ion-icon>
               </div>
 
@@ -72,12 +72,44 @@
                 >
                   <a href="" class="">Contas Unranked</a>
                 </li>
+                <li
+                class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+              >
+                <a href="" class="">Contas NFA</a>
+              </li>
               </ul>
             </li>
 
-            <li class="header-navbar_opt hover:text-secondary duration-500">
-              <a href="" class="">Contas Handlevel</a>
-            </li>
+            <li
+            class="drop relative group"
+            onmouseenter="changeArrow(this)"
+            onmouseleave="changeArrow(this)"
+          >
+            <div class="drop-top hidden md:flex items-center gap-3">
+              <a href="#" class="drop-top">Valorant</a>
+              <ion-icon name="caret-down" id="drop-arrow"></ion-icon>
+            </div>
+
+            <ul
+              class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+            >
+              <li
+                class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+              >
+                <a href="" class="">Contas Ranqueadas</a>
+              </li>
+              <li
+                class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+              >
+                <a href="" class="">Contas Unranked</a>
+              </li>
+              <li
+                class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+              >
+                <a href="" class="">Contas NFA</a>
+              </li>
+            </ul>
+          </li>
             <li class="header-navbar_opt hover:text-secondary duration-500">
               <a href="" class="">FAQ</a>
             </li>

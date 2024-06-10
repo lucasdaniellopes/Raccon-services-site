@@ -6,6 +6,6 @@ function onToggleMenu(e) {
 }
 
 function changeArrow(e) {
-  const navbar = document.getElementById("drop-arrow");
+  const navbar = e.childNodes[1].childNodes[3];
   navbar.name = navbar.name === "caret-down" ? "caret-up" : "caret-down";
 }
