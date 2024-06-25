@@ -51,8 +51,8 @@
           >
             <li
               class="drop relative group"
-              onmouseenter="changeArrow(this)"
-              onmouseleave="changeArrow(this)"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
             >
               <div class="drop-top hidden md:flex items-center gap-3">
                 <a href="#" class="drop-top">League of Legends</a>
@@ -82,8 +82,8 @@
 
             <li
             class="drop relative group"
-            onmouseenter="changeArrow(this)"
-            onmouseleave="changeArrow(this)"
+            onmouseenter="changeHeaderArrow(this)"
+            onmouseleave="changeHeaderArrow(this)"
           >
             <div class="drop-top hidden md:flex items-center gap-3">
               <a href="#" class="drop-top">Valorant</a>
@@ -111,7 +111,7 @@
             </ul>
           </li>
             <li class="header-navbar_opt hover:text-secondary duration-500">
-              <a href="" class="">FAQ</a>
+              <a href="#faq" class="">FAQ</a>
             </li>
             <li class="header-navbar_opt hover:text-secondary duration-500">
               <a href="" class="">Contatos</a>
@@ -253,19 +253,86 @@
         </div>
       </div>
     </section>
-    <section class="faq">
-      <div class="faq-wrapper">
-        <h2>Perguntas Frequentes</h2>
-        <ul class="faq-wrapper__questions">
-          <li class="question"></li>
-          <li class="question"></li>
-          <li class="question"></li>
-          <li class="question"></li>
-          <li class="question"></li>
-          <li class="question"></li>
-          <li class="question"></li>
-          <li class="question"></li>
-        </ul>
+    <section class="faq text-white mt-11" id="faq">
+      <div class="faq-wrapper w-[90%] mx-auto">
+        <h2 class="text-6xl leading-[80px] text-center mb-14 pt-4 text-white font-bold">Perguntas Frequentes</h2>
+        <div class="faq-wrapper__questions flex flex-col md:flex-row w-full md:gap-4 items-center">
+          <div class="faq-wrapper__questions-col1 w-full md:w-1/2">
+            
+            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[80px] hover:bg-secondary duration-500 cursor-pointer" onclick="toggleAnswer(1), changeFaqArrow(this)">
+              <div class="flex items-center justify-between" >
+                <h2 class="text-xl font-semibold">Posso alterar a senha e o e-mail da conta?</h2>
+                <button class=" focus:outline-none">
+                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+                </button>
+              </div>
+              <div class="mt-4 hidden" id="answer-1">
+                Sim! Todas as nossas contas LoL vêm com detalhes de login para que você possa fazer login na sua conta através do site de League of Legends e alterar o que quiser.
+              </div>
+            </div>
+            
+            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[80px] hover:bg-secondary  duration-500 cursor-pointer"  onclick="toggleAnswer(2), changeFaqArrow(this)">
+              <div class="flex items-center justify-between ">
+                <h2 class="text-xl font-semibold">Como alterar seu e-mail e senha</h2>
+                <button class=" focus:outline-none">
+                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+                </button>
+              </div>
+              <div class="mt-4  hidden" id="answer-2">
+                Para alterar seu e-mail e senha acesse leagueoflegends.com e faça login na conta. Vá para configurações (canto superior direito) e clique no lápis, no lado direito do e-mail atual. Digite seu novo e-mail e verifique-o com o e-mail que a riot lhe enviou. Escolha uma senha forte depois.
+              </div>
+            </div>
+            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[80px] hover:bg-secondary  duration-500 cursor-pointer z-[2]" onclick="toggleAnswer(3), changeFaqArrow(this)">
+              <div class="flex items-center justify-between " >
+                <h2 class="text-xl font-semibold h-full z-[10]">Depois de quanto tempo posso acessar minha conta?</h2>
+                <button class=" focus:outline-none">
+                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+                </button>
+              </div>
+              <div class="mt-4 hidden" id="answer-3">
+                Depois de pagar pela sua conta, os detalhes da conta serão enviados instantaneamente para o endereço de e-mail que você usou para finalizar a compra. Certifique-se de verificar sua pasta de spam/lixo eletrônico, pois ela também pode acabar lá!
+              </div>
+            </div>
+          </div>
+          
+          <div class="faq-wrapper__questions-col2 w-full md:w-1/2">
+            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[80px]  hover:bg-secondary  duration-500 cursor-pointer" onclick="toggleAnswer(4), changeFaqArrow(this)">
+              <div class="flex items-center justify-between" >
+                <h2 class="text-xl font-semibold">Qual é o tempo de garantia contra ban?</h2>
+                <button class=" focus:outline-none">
+                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+                </button>
+              </div>
+              <div class="mt-4 hidden" id="answer-4">
+                Se sua conta for banida por qualquer falha ou defeito nosso, forneceremos a você uma nova conta substituta gratuitamente.
+              </div>
+            </div>
+            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[80px] hover:bg-secondary  duration-500 cursor-pointer" onclick="toggleAnswer(5), changeFaqArrow(this)">
+              <div class="flex items-center justify-between " >
+                <h2 class="text-xl font-semibold">Posso começar a jogar partidas ranqueadas imediatamente?</h2>
+                <button class=" focus:outline-none">
+                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+                </button>
+              </div>
+              <div class="mt-4 hidden" id="answer-5">
+                Você precisa de pelo menos 20 campeões para jogar partidas ranqueadas. Compre alguns campeões usando a essência azul da sua conta e comece a jogar!
+              </div>
+            </div>
+            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[80px] hover:bg-secondary  duration-500 cursor-pointer" onclick="toggleAnswer(6), changeFaqArrow(this)">
+              <div class="flex items-center justify-between " >
+                <h2 class="text-xl font-semibold">De quanta essência azul eu preciso para jogar partidas ranqueadas?</h2>
+                <button class="focus:outline-none">
+                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+                </button>
+              </div>
+              <div class="mt-4 hidden" id="answer-6">
+                Você precisa de pelo menos 20 campeões para jogar partidas ranqueadas. Compre alguns campeões usando as essências azuis da sua conta e comece a jogar! São necessários 20 campeões: 13 x 450 EA = 5.850, 7 X 1.350 EA = 9.450 EA total necessário = 15.390 EA.
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
       </div>
     </section>
   </body>
