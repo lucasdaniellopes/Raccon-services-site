@@ -22,3 +22,14 @@ function changeFaqArrow(e) {
       ? "chevron-up-outline"
       : "chevron-down-outline";
 }
+
+function openModal() {
+  document.getElementById("modal").classList.remove("hidden");
+  document.getElementById("modal").classList.add("block");
+}
+
+// Função para fechar o modal
+function closeModal() {
+  document.getElementById("modal").classList.remove("block");
+  document.getElementById("modal").classList.add("hidden");
+}
