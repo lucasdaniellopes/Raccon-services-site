@@ -47,16 +47,16 @@
           id="navbar"
         >
           <ul
-            class="flex flex-col md:flex-row md:justify-between md:items-center gap-10 text-2xl h-full pl-14 font-semibold md:bg-transparent"
+            class="flex flex-col md:flex-row md:justify-between md:items-center gap-10 text-2xl h-full pl-14 font-semibold md:bg-transparent max-h-screen"
           >
             <li
               class="drop relative group"
               onmouseenter="changeHeaderArrow(this)"
               onmouseleave="changeHeaderArrow(this)"
             >
-              <div class="drop-top hidden md:flex items-center gap-3">
-                <a href="#" class="drop-top">League of Legends</a>
-                <ion-icon name="caret-down" id="drop-arrow"></ion-icon>
+              <div class="drop-top flex items-center gap-3">
+                <a href="#" class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold">League of Legends</a>
+                <ion-icon name="caret-down" id="drop-arrow" class="hidden md:block"></ion-icon>
               </div>
 
               <ul
@@ -85,9 +85,9 @@
             onmouseenter="changeHeaderArrow(this)"
             onmouseleave="changeHeaderArrow(this)"
           >
-            <div class="drop-top hidden md:flex items-center gap-3">
-              <a href="#" class="drop-top">Valorant</a>
-              <ion-icon name="caret-down" id="drop-arrow"></ion-icon>
+            <div class="drop-top flex items-center gap-3">
+              <a href="#" class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold">Valorant</a>
+              <ion-icon name="caret-down" id="drop-arrow" class="hidden md:block"></ion-icon>
             </div>
 
             <ul
