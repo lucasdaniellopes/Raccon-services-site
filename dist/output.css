@@ -701,10 +701,6 @@ video {
   display: none;
 }
 
-.modal-visible {
-  display: block;
-}
-
 .sr-only {
   position: absolute;
   width: 1px;
@@ -765,10 +761,6 @@ video {
   z-index: 10;
 }
 
-.z-50 {
-  z-index: 50;
-}
-
 .z-\[-10\] {
   z-index: -10;
 }
@@ -789,16 +781,16 @@ video {
   z-index: 10;
 }
 
+.z-\[2000\] {
+  z-index: 2000;
+}
+
 .z-\[2\] {
   z-index: 2;
 }
 
 .z-\[5\] {
   z-index: 5;
-}
-
-.z-\[2000\] {
-  z-index: 2000;
 }
 
 .mx-auto {
@@ -832,10 +824,6 @@ video {
 
 .ml-4 {
   margin-left: 1rem;
-}
-
-.mr-2 {
-  margin-right: 0.5rem;
 }
 
 .mr-\[4\%\] {
@@ -934,16 +922,20 @@ video {
   min-height: 800px;
 }
 
-.min-h-\[90px\] {
-  min-height: 90px;
-}
-
 .w-1\/2 {
   width: 50%;
 }
 
+.w-1\/3 {
+  width: 33.333333%;
+}
+
 .w-6 {
   width: 1.5rem;
+}
+
+.w-\[128px\] {
+  width: 128px;
 }
 
 .w-\[90\%\] {
@@ -952,14 +944,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[128px\] {
-  width: 128px;
-}
-
-.w-1\/3 {
-  width: 33.333333%;
 }
 
 .min-w-\[140px\] {
@@ -1045,10 +1029,6 @@ video {
   align-items: center;
 }
 
-.justify-end {
-  justify-content: flex-end;
-}
-
 .justify-center {
   justify-content: center;
 }
@@ -1067,6 +1047,10 @@ video {
 
 .gap-3 {
   gap: 0.75rem;
+}
+
+.gap-4 {
+  gap: 1rem;
 }
 
 .gap-5 {
@@ -1089,10 +1073,6 @@ video {
   gap: 40px;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1109,16 +1089,8 @@ video {
   align-self: flex-end;
 }
 
-.self-center {
-  align-self: center;
-}
-
 .overflow-hidden {
   overflow: hidden;
-}
-
-.rounded {
-  border-radius: 0.25rem;
 }
 
 .rounded-3xl {
@@ -1163,10 +1135,6 @@ video {
   border-right-width: 0px;
 }
 
-.border-t {
-  border-top-width: 1px;
-}
-
 .border-\[\#7103ab\] {
   --tw-border-opacity: 1;
   border-color: rgb(113 3 171 / var(--tw-border-opacity));
@@ -1187,11 +1155,6 @@ video {
   background-color: rgb(37 7 65 / var(--tw-bg-opacity));
 }
 
-.bg-blue-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
-}
-
 .bg-gray-800 {
   --tw-bg-opacity: 1;
   background-color: rgb(31 41 55 / var(--tw-bg-opacity));
@@ -1202,11 +1165,6 @@ video {
   background-color: rgb(15 8 34 / var(--tw-bg-opacity));
 }
 
-.bg-red-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
-}
-
 .bg-secondary {
   --tw-bg-opacity: 1;
   background-color: rgb(173 0 255 / var(--tw-bg-opacity));
@@ -1214,11 +1172,6 @@ video {
 
 .bg-secondary\/10 {
   background-color: rgb(173 0 255 / 0.1);
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-secondary\/50 {
@@ -1255,14 +1208,6 @@ video {
 
 .to-\[\#ad00ff0a\] {
   --tw-gradient-to: #ad00ff0a var(--tw-gradient-to-position);
-}
-
-.to-\[\#ad00ff0\] {
-  --tw-gradient-to: #ad00ff0 var(--tw-gradient-to-position);
-}
-
-.to-\[\#\#AD00FF\] {
-  --tw-gradient-to: ##AD00FF var(--tw-gradient-to-position);
 }
 
 .bg-cover {
@@ -1373,6 +1318,11 @@ video {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
@@ -1409,11 +1359,6 @@ video {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .font-bold {
@@ -1483,12 +1428,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .transition {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -1546,11 +1485,6 @@ video {
 .hover\:bg-secondary:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(173 0 255 / var(--tw-bg-opacity));
-}
-
-.hover\:text-gray-700:hover {
-  --tw-text-opacity: 1;
-  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .hover\:text-secondary:hover {
