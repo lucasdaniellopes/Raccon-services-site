@@ -1,0 +1,449 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../assets/favicon_io (1)/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../dist/output.css" />
+    <link rel="stylesheet" href="../../index.css" />
+
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="./index.js"></script>
+    <title>Raccon NFA</title>
+  </head>
+  <body class="bg-primary flex flex-col">
+    <header class="md:absolute left-0 w-full z-[1000]">
+      <div
+        class="header-wrapper md:container md:w-[90%] md:mx-auto xl:max-w-[1280px] flex justify-between text-white h-[150px] min-w-[385px]"
+      >
+        <div class="header-logo min-w-[140px] max-w-[140px] ml-4 mt-4">
+          <a href="../../index.html" class="w-full">
+            <img
+              src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png"
+              alt=""
+              class="w-full"
+            />
+          </a>
+        </div>
+        <nav
+          class="header-navbar bottom-[-100%] md:bottom-0 z-[5] md:bg-transparent md:justify-end"
+          id="navbar"
+        >
+          <ul
+            class="flex flex-col md:flex-row md:justify-between md:items-center gap-10 text-2xl h-full pl-14 font-semibold md:bg-transparent max-h-screen"
+          >
+            <li
+              class="drop relative group"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
+            >
+              <div class="drop-top flex items-center gap-3">
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold"
+                  >League of Legends</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
+              </div>
+
+              <ul
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+              >
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                >
+                  <a href="" class="">Contas Ranqueadas</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas Unranked</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
+              </ul>
+            </li>
+
+            <li
+              class="drop relative group"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
+            >
+              <div class="drop-top flex items-center gap-3">
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold"
+                  >Valorant</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
+              </div>
+
+              <ul
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+              >
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                >
+                  <a href="" class="">Contas Ranqueadas</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas Unranked</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="https://presenteslol.com/index.php" class=""
+                >Presentes LoL</a
+              >
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="#faq" class="">FAQ</a>
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="" class="">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          id="menu"
+          name="menu"
+          class="text-[40px] mt-6 md:hidden cursor-pointer mr-[4%]"
+        ></ion-icon>
+      </div>
+    </header>
+    <main class="pt-[150px]">
+      <h1>Loja NFA</h1>
+      <section class="filter">
+        <a href="#">Resetar filtros</a>
+        <div>
+          <div class="filter-server">
+            <label for="serverFilter">Server</label>
+            <select name="serverFilter" id="serverFilter">
+              <option value="EU">Europa</option>
+              <option value="NA">America do norte</option>
+              <option value="BR">Brasil</option>
+            </select>
+          </div>
+        </div>
+        <div>
+          <div class="filter-ranked">
+            <ul class="filter-ranked__ranks w-full gap-6 md:grid-cols-2">
+              <li>
+                  <input type="radio" id="iron-rank" name="iron-rank" value="iron-rank" class="filter-ranked__ranks-rank shidden peer" required />
+                  <label for="iron-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+                      <div class="block">
+                          <div class="w-full text-lg font-semibold">0-50 MB</div>
+                          <div class="w-full">Good for small websites</div>
+                      </div>
+                      <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                      </svg>
+                  </label>
+              </li>
+              <li>
+                  <input type="radio" id="bronze-rank" name="bronze-rank" value="bronze-rank" class="filter-ranked__ranks-rank hidden peer">
+                  <label for="bronze-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                      <div class="block">
+                          <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                          <div class="w-full">Good for large websites</div>
+                      </div>
+                      <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                      </svg>
+                  </label>
+              </li>
+              <li>
+                <input type="radio" id="silver-rank" name="silver-rank" value="silver-rank" class="filter-ranked__ranks-rank hidden peer">
+                <label for="silver-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                        <div class="w-full">Good for large websites</div>
+                    </div>
+                    <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </label>
+            </li>
+            <li>
+              <input type="radio" id="gold-rank" name="gold-rank" value="gold-rank" class="filter-ranked__ranks-rank hidden peer">
+              <label for="gold-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                  <div class="block">
+                      <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                      <div class="w-full">Good for large websites</div>
+                  </div>
+                  <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                  </svg>
+              </label>
+          </li>
+          <li>
+            <input type="radio" id="platinum-rank" name="platinum-rank" value="platinum" class="filter-ranked__ranks-rank hidden peer">
+            <label for="platinum-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                    <div class="w-full">Good for large websites</div>
+                </div>
+                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="emerald-rank" name="emerald" value="emerald" class="filter-ranked__ranks-rank hidden peer">
+            <label for="emerald" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                    <div class="w-full">Good for large websites</div>
+                </div>
+                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="diamond-rank" name="diamond" value="diamond" class="filter-ranked__ranks-rank hidden peer">
+            <label for="diamond" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                    <div class="w-full">Good for large websites</div>
+                </div>
+                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="master-rank" name="master" value="master" class="filter-ranked__ranks-rank hidden peer">
+            <label for="master" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                    <div class="w-full">Good for large websites</div>
+                </div>
+                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="grandmaster-rank" name="grandmaster" value="grandmaster" class="filter-ranked__ranks-rank hidden peer">
+            <label for="grandmaster" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                    <div class="w-full">Good for large websites</div>
+                </div>
+                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </label>
+          </li>
+          <li>
+            <input type="radio" id="challenger-rank" name="challenger" value="challenger" class="filter-ranked__ranks-rank hidden peer">
+            <label for="challenger" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
+                    <div class="w-full">Good for large websites</div>
+                </div>
+                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                </svg>
+            </label>
+          </li>
+          </ul>
+          </div>
+        </div>
+      </section>
+      <section class="accounts"></section>
+    </main>
+
+    <footer class="bg-secondary/10 text-white mt-10 w-full">
+      <div class="mx-auto max-w-screen-xl w-[90%] space-y-8 py-16 sm:px-6 lg:space-y-16">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div class="min-w-[140px] max-w-[140px]">
+             <img src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png" alt="">
+            </div>
+    
+            <p class="mt-4 max-w-xs">
+              League of Legends é uma marca registrada da Riot Games, Inc. Não somos de forma alguma afiliados, associados ou endossados ​​pela Riot Games, Inc.
+            </p>
+    
+            <ul class="mt-8 flex gap-6">
+              <li>
+                <a
+                  href="https://discord.gg/raccoonsmurfs"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Discord</span>
+    
+                  <ion-icon name="logo-discord" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Instagram</span>
+    
+                  
+                  <ion-icon name="logo-instagram" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="https://twitter.com/RaccoonSmurfs"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Twitter</span>
+    
+                  <ion-icon name="logo-twitter" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">GitHub</span>
+    
+                  <ion-icon name="logo-github" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+            </ul>
+            <p class="mt-4 text-xs inline-block hover:text-secondary duration-300">Desenvolvido por <a href="https://github.com/lucasdaniellopes?tab=repositories" class="font-bold">Lucas Daniel Lopes Brasileiro</a></p>
+          </div>
+    
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Serviços</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    1on1 Coaching
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contas League of Legends
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contas Valorant
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="https://presenteslol.com/index.php" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Presentes LoL
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Empresa</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Sobre nós
+                  </a>
+                </li>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Precisa de ajuda?</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contatos
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#faq" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    FAQs
+                  </a>
+                </li>
+  
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Legal</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Termos e condições
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Política de Privacidade
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          &copy; 2024. Raccon Services. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
