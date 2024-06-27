@@ -1,8 +1,13 @@
 function onToggleMenu(e) {
   const navbar = document.getElementById("navbar");
+  const navbarUl = document.getElementById("navbar-ul");
   e.name = e.name === "menu" ? "close" : "menu";
-  navbar.classList.toggle("bottom-[-25%]");
+  navbar.classList.toggle("bottom-[-30%]");
+  navbar.classList.toggle("left-[0%]");
   navbar.classList.toggle("opacity-100");
+
+  navbarUl.classList.toggle("hidden");
+  navbarUl.classList.toggle("flex");
 }
 
 function changeHeaderArrow(e) {

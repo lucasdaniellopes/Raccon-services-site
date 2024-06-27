@@ -96,3 +96,30 @@
     display: block;
   }
 }
+
+input[type="range"] {
+  -webkit-appearance: none; /* Remove a aparência padrão do navegador */
+  width: 100%; /* Ajuste a largura conforme necessário */
+  height: 4px; /* Altura da faixa */
+  background: #ad00ff; /* Cor de fundo da faixa */
+  border-radius: 3px;
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove a aparência padrão do navegador */
+  appearance: none;
+  width: 16px; /* Largura da bola */
+  height: 16px; /* Altura da bola */
+  background: #ad00ff; /* Cor da bola */
+  border-radius: 50%; /* Arredondamento da bola */
+  cursor: pointer; /* Cursor ao passar por cima */
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 16px; /* Largura da bola */
+  height: 16px; /* Altura da bola */
+  background: #ad00ff; /* Cor da bola */
+  border-radius: 50%; /* Arredondamento da bola */
+  cursor: pointer; /* Cursor ao passar por cima */
+}

@@ -24,8 +24,9 @@
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <script src="./index.js"></script>
-    <title>Raccon NFA</title>
+    <script defer src="../../index.js"></script>
+    <script defer src="./nfaShop.js"></script>
+    <title>Raccon LoL NFA</title>
   </head>
   <body class="bg-primary flex flex-col">
     <header class="md:absolute left-0 w-full z-[1000]">
@@ -42,11 +43,12 @@
           </a>
         </div>
         <nav
-          class="header-navbar bottom-[-100%] md:bottom-0 z-[5] md:bg-transparent md:justify-end"
+          class="header-navbar  md:bottom-0 z-[5] md:bg-transparent md:justify-end h-[105vh] md:h-auto bottom-[-100%] left-[-100%]"
           id="navbar"
         >
           <ul
-            class="flex flex-col md:flex-row md:justify-between md:items-center gap-10 text-2xl h-full pl-14 font-semibold md:bg-transparent max-h-screen"
+            class="hidden  md:flex flex-col md:flex-row md:justify-between md:items-center gap-10 text-2xl  pl-14 font-semibold md:bg-transparent max-h-screen"
+            id="navbar-ul"
           >
             <li
               class="drop relative group"
@@ -57,7 +59,7 @@
                 <a
                   href="#"
                   class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold"
-                  >League of Legends</a
+                  >LoL</a
                 >
                 <ion-icon
                   name="caret-down"
@@ -146,141 +148,190 @@
         ></ion-icon>
       </div>
     </header>
-    <main class="pt-[150px]">
-      <h1>Loja NFA</h1>
-      <section class="filter">
-        <a href="#">Resetar filtros</a>
-        <div>
-          <div class="filter-server">
-            <label for="serverFilter">Server</label>
-            <select name="serverFilter" id="serverFilter">
-              <option value="EU">Europa</option>
-              <option value="NA">America do norte</option>
-              <option value="BR">Brasil</option>
+    <main class="pt-[70px] md:pt-[200px] text-white flex flex-col items-center w-full">
+      <h1 class="font-bold text-3xl mb-14">Loja NFA</h1>
+      <section class="filter flex flex-col justify-center gap-6  w-[90%] mx-auto max-w-[1280px] rounded-2xl bg-gradient-to-r from-[#15082B] to-[#0f0822]">
+        <a href="#" class="inline-block self-center pt-6 md:pt-10 text-secondary cursor-pointer font-semibold text-base">Resetar filtros</a>
+        <div class="filter-filters flex justify-center items-center flex-wrap gap-4 md:flex-row p-6 md:p-10 lg:justify-start">
+          <div class="filter-server flex flex-col w-full gap-2 lg:w-[32%] md:w-[45%] md:pb-10">
+            <label for="serverFilter" class="font-semibold text-lg">Server</label>
+            <select name="serverFilter" id="serverFilter" class="p-4 rounded-lg bg-[#1f1032]">
+              <option value="NA">NA</option>
+              <option value="EUW">EUW</option>
+              <option value="EUNE">EUNE</option>
+              <option value="OCE">OCE</option>
+              <option value="TR">TR</option>
+              <option value="BR" selected>BR</option>
+              <option value="LAS">LAS</option>
+              <option value="LAN">LAN</option>
+              <option value="RU">RU</option>
             </select>
+          </div>
+          <div class="filter-skin flex flex-col w-full gap-3 lg:w-[32%] md:w-[45%]">
+            <div class="filter-skin__name flex flex-col gap-2 ">
+            <label for="skinFilter" class="font-semibold text-lg">Skin</label>
+            <input type="text" name="skinFilter" id="skinFilter" class="p-4 rounded-lg bg-[#1f1032]" placeholder="Digite o nome da skin">
+            </div>
+            <div class="filter-skin__quant">
+            <label for="skinFilterQuant" class="sr-only block"></label>
+            <input type="range" name="skinFilterQuant" id="skinFilterQuant" min="0" max="1630" value="1" oninput="updateNumberOfSkins(this.value)">
+            <div class="flex justify-between">
+              <span id="minNumberOfSkins">0</span>
+              <span id="maxNumberOfSkins">1630</span>
+            </div>
+            </div>
+          </div>
+          <div class="filter-champion flex flex-col  w-full gap-3 lg:w-[32%] md:w-[45%]">
+            <div class="filter-champion__text  flex flex-col  gap-2">
+              <label for="championFilter" class="font-semibold text-lg">Campeão</label>
+              <select name="championFilter" id="championFilter" class="p-4 rounded-lg bg-[#1f1032]">
+                <option value="all" selected>Todos</option>
+               <option value="aatrox">Aatrox</option>
+               <option value="ahri">Ahri</option>
+               <option value="yasuo">Yasuo</option>
+               <option value="velkoz">Vel'koz</option>
+               <option value="zed">Zed</option>
+              </select>
+            </div>
+            <div class="filter-champion__quant">
+              <label for="championFilterQuant" class="sr-only block"></label>
+              <input type="range" name="championFilterQuant" id="championFilterQuant" min="0" max="158" value="1" oninput="updateNumberOfChampions(this.value)">
+              <div class="flex justify-between">
+                <span id="minNumberOfChampions">0</span>
+                <span id="maxNumberOfChampions">168</span>
+              </div>
+              </div>
+          </div>
+          <div class="filter-price flex flex-col w-full gap-2 mt-5 border-2 border-secondary p-3 rounded-lg lg:w-[32%] md:w-[45%] justify-self-start">
+            <label for="filterPrice" class="font-semibold text-lg">Preço</label>
+            <input type="range" name="filterPrice" id="filterPrice" min="0" max="3800" value="1" oninput="updatePrice(this.value)">
+            <div class="flex justify-between">
+              <span id="minPrice">0 RP</span>
+              <span id="maxPrice">3800 RP</span>
+            </div>
           </div>
         </div>
         <div>
-          <div class="filter-ranked">
-            <ul class="filter-ranked__ranks w-full gap-6 md:grid-cols-2">
-              <li>
-                  <input type="radio" id="iron-rank" name="iron-rank" value="iron-rank" class="filter-ranked__ranks-rank shidden peer" required />
-                  <label for="iron-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
+          <div class="filter-ranked p-6 md:p10 pt-0">
+            <span class="font-semibold text-xl">Elo</span>
+            <ul class="filter-ranked__ranks w-full gap-6 md:grid-cols-2 flex flex-col justify-center md:flex-row md:flex-wrap md:justify-start mt-2">
+              <li class="lg:basis-[18%] ">
+                  <input type="radio" id="iron-rank" name="rank" value="iron-rank" class="filter-ranked__ranks-rank hidden peer" required />
+                  <label for="iron-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">                           
                       <div class="block">
-                          <div class="w-full text-lg font-semibold">0-50 MB</div>
-                          <div class="w-full">Good for small websites</div>
+                          <div class="w-full text-lg font-semibold">Ferro</div>
+                          
                       </div>
-                      <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                      </svg>
+                      <div class="w-11">
+                        <img src="../../../assets/ironElo.webp" alt="">
+                      </div>
                   </label>
               </li>
-              <li>
-                  <input type="radio" id="bronze-rank" name="bronze-rank" value="bronze-rank" class="filter-ranked__ranks-rank hidden peer">
-                  <label for="bronze-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <li class="lg:basis-[18%] ">
+                  <input type="radio" id="bronze-rank" name="rank" value="bronze-rank" class="filter-ranked__ranks-rank hidden peer">
+                  <label for="bronze-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                       <div class="block">
-                          <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                          <div class="w-full">Good for large websites</div>
+                          <div class="w-full text-lg font-semibold">Bronze</div>
                       </div>
-                      <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                      </svg>
+                      <div class="w-11">
+                        <img src="../../../assets/bronzeElo.webp" alt="">
+                      </div>
                   </label>
               </li>
-              <li>
-                <input type="radio" id="silver-rank" name="silver-rank" value="silver-rank" class="filter-ranked__ranks-rank hidden peer">
-                <label for="silver-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+              <li class="lg:basis-[18%] ">
+                <input type="radio" id="silver-rank" name="rank" value="silver-rank" class="filter-ranked__ranks-rank hidden peer">
+                <label for="silver-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                     <div class="block">
-                        <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                        <div class="w-full">Good for large websites</div>
+                        <div class="w-full text-lg font-semibold">Prata</div>
+                        
                     </div>
-                    <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                    </svg>
+                    <div class="w-11">
+                      <img src="../../../assets/silverElo.webp" alt="">
+                    </div>
                 </label>
             </li>
-            <li>
-              <input type="radio" id="gold-rank" name="gold-rank" value="gold-rank" class="filter-ranked__ranks-rank hidden peer">
-              <label for="gold-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+            <li class="lg:basis-[18%] ">
+              <input type="radio" id="gold-rank" name="rank" value="gold-rank" class="filter-ranked__ranks-rank hidden peer">
+              <label for="gold-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                   <div class="block">
-                      <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                      <div class="w-full">Good for large websites</div>
+                      <div class="w-full text-lg font-semibold">Ouro</div>
+                     
                   </div>
-                  <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                  </svg>
+                  <div class="w-11">
+                    <img src="../../../assets/goldElo.webp" alt="">
+                  </div>
               </label>
           </li>
-          <li>
-            <input type="radio" id="platinum-rank" name="platinum-rank" value="platinum" class="filter-ranked__ranks-rank hidden peer">
-            <label for="platinum-rank" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <li class="lg:basis-[18%] ">
+            <input type="radio" id="platinum-rank" name="rank" value="platinum" class="filter-ranked__ranks-rank hidden peer">
+            <label for="platinum-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                 <div class="block">
-                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                    <div class="w-full">Good for large websites</div>
+                    <div class="w-full text-lg font-semibold">Platina</div>
+                   
                 </div>
-                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
+                <div class="w-11">
+                  <img src="../../../assets/platinumElo.png" alt="">
+                </div>
             </label>
           </li>
-          <li>
-            <input type="radio" id="emerald-rank" name="emerald" value="emerald" class="filter-ranked__ranks-rank hidden peer">
-            <label for="emerald" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <li class="lg:basis-[18%] ">
+            <input type="radio" id="emerald-rank" name="rank" value="emerald" class="filter-ranked__ranks-rank hidden peer">
+            <label for="emerald-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                 <div class="block">
-                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                    <div class="w-full">Good for large websites</div>
+                    <div class="w-full text-lg font-semibold">Esmeralda</div>
+                   
                 </div>
-                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
+                <div class="w-11">
+                  <img src="../../../assets/emeraldElo.png" alt="">
+                </div>
             </label>
           </li>
-          <li>
-            <input type="radio" id="diamond-rank" name="diamond" value="diamond" class="filter-ranked__ranks-rank hidden peer">
-            <label for="diamond" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <li class="lg:basis-[18%] ">
+            <input type="radio" id="diamond-rank" name="rank" value="diamond" class="filter-ranked__ranks-rank hidden peer">
+            <label for="diamond-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                 <div class="block">
-                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                    <div class="w-full">Good for large websites</div>
+                    <div class="w-full text-lg font-semibold">Diamante</div>
+                    
                 </div>
-                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
+                <div class="w-11">
+                  <img src="../../../assets/diamondElo.png" alt="">
+                </div>
             </label>
           </li>
-          <li>
-            <input type="radio" id="master-rank" name="master" value="master" class="filter-ranked__ranks-rank hidden peer">
-            <label for="master" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <li class="lg:basis-[18%] ">
+            <input type="radio" id="master-rank" name="rank" value="master" class="filter-ranked__ranks-rank hidden peer">
+            <label for="master-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                 <div class="block">
-                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                    <div class="w-full">Good for large websites</div>
+                    <div class="w-full text-lg font-semibold">Mestre</div>
+                    
                 </div>
-                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
+                <div class="w-11">
+                  <img src="../../../assets/masterElo.png" alt="">
+                </div>
             </label>
           </li>
-          <li>
-            <input type="radio" id="grandmaster-rank" name="grandmaster" value="grandmaster" class="filter-ranked__ranks-rank hidden peer">
-            <label for="grandmaster" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <li class="lg:basis-[18%] ">
+            <input type="radio" id="grandmaster-rank" name="rank" value="grandmaster" class="filter-ranked__ranks-rank hidden peer">
+            <label for="grandmaster-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                 <div class="block">
-                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                    <div class="w-full">Good for large websites</div>
+                    <div class="w-full text-lg font-semibold">Grãomestre</div>
+                    
                 </div>
-                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
+                <div class="w-11">
+                  <img src="../../../assets/grandmasterElo.png" alt="">
+                </div>
             </label>
           </li>
-          <li>
-            <input type="radio" id="challenger-rank" name="challenger" value="challenger" class="filter-ranked__ranks-rank hidden peer">
-            <label for="challenger" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <li class="lg:basis-[18%] ">
+            <input type="radio" id="challenger-rank" name="rank" value="challenger" class="filter-ranked__ranks-rank hidden peer">
+            <label for="challenger-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300">
                 <div class="block">
-                    <div class="w-full text-lg font-semibold">500-1000 MB</div>
-                    <div class="w-full">Good for large websites</div>
+                    <div class="w-full text-lg font-semibold">Desafiante</div>
+                    
                 </div>
-                <svg class="w-5 h-5 ms-3 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
-                </svg>
+                <div class="w-11">
+                  <img src="../../../assets/challengerElo.png" alt="">
+                </div>
             </label>
           </li>
           </ul>
