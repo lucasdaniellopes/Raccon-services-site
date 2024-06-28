@@ -123,3 +123,21 @@ input[type="range"]::-moz-range-thumb {
   border-radius: 50%; /* Arredondamento da bola */
   cursor: pointer; /* Cursor ao passar por cima */
 }
+
+.select-list::-webkit-scrollbar {
+  width: 12px;
+}
+
+.select-list::-webkit-scrollbar-track {
+  background: #1f1032; /* cor do track */
+}
+
+.select-list::-webkit-scrollbar-thumb {
+  background-color: #6b7280; /* cor do thumb */
+  border-radius: 10px;
+  border: 3px solid #1f1032; /* padding around thumb */
+}
+
+.select-list::-webkit-scrollbar-thumb:hover {
+  background: #4b5563; /* cor do thumb ao passar o mouse */
+}
