@@ -55,7 +55,7 @@ function serverDropdown() {
 
     resetBtn.addEventListener("click", (event) => {
       event.preventDefault();
-      selectTop.querySelector("span").textContent = "Seelecione um servidor";
+      selectTop.querySelector("span").textContent = "Selecione um servidor";
       selectTop.removeAttribute("data-slug");
       searchInput.value = "";
       serverOptions.forEach((option) =>
