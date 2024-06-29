@@ -161,42 +161,28 @@
                 <ion-icon name="chevron-down-outline" id="server-chevron-icon" class="duration-500"></ion-icon>
               </div>            
               <div id="server-select-list" class="select-list bg-[#1f1032] rounded-lg p-4 hidden absolute top-full left-0 right-0 z-10 border border-transparent">
-                <div class="input-block mb-2">
+                <a href="javascript:void(0);" id="server-reset-btn" class="block p-2 bg-[#1f1032] hover:bg-secondary/50 rounded border-2 border-primary/50 duration-500">Remover servidor</a>
+                <div class="input-block my-2">
                   <input id="search-servers" type="text" name="search_servers" placeholder="Procure um servidor..." class="p-2 rounded bg-[#1f1032] text-white w-full outline-secondary border border-transparent focus:outline-none focus:ring-2 focus:ring-secondary">
                 </div>
                 <div id="server-no-results" class="not-results hidden text-white">
                   <span>Nenhum resultado</span>
                 </div>
-                <ul id="server-options" class="max-h-40 overflow-y-auto">
-                  <li><a href="javascript:void(0);" data-slug="NA" class="block p-2 hover:bg-secondary/50 rounded">NA</a></li>
-                  <li><a href="javascript:void(0);" data-slug="EUW" class="block p-2 hover:bg-secondary/50 rounded">EUW</a></li>
-                  <li><a href="javascript:void(0);" data-slug="EUNE" class="block p-2 hover:bg-secondary/50 rounded">EUNE</a></li>
-                  <li><a href="javascript:void(0);" data-slug="OCE" class="block p-2 hover:bg-secondary/50 rounded">OCE</a></li>
-                  <li><a href="javascript:void(0);" data-slug="TR" class="block p-2 hover:bg-secondary/50 rounded">TR</a></li>
-                  <li><a href="javascript:void(0);" data-slug="BR" class="block p-2 hover:bg-secondary/50 rounded">BR</a></li>
-                  <li><a href="javascript:void(0);" data-slug="LAS" class="block p-2 hover:bg-secondary/50 rounded">LAS</a></li>
-                  <li><a href="javascript:void(0);" data-slug="LAN" class="block p-2 hover:bg-secondary/50 rounded">LAN</a></li>
-                  <li><a href="javascript:void(0);" data-slug="RU" class="block p-2 hover:bg-secondary/50 rounded">RU</a></li>
+                <ul id="server-options" class="max-h-40 overflow-y-auto flex flex-col gap-1">
+                  <li><a href="javascript:void(0);" data-slug="all" class="block p-2 hover:bg-secondary/50 rounded duration-500">Todos</a></li>
+                  <li><a href="javascript:void(0);" data-slug="NA" class="block p-2 hover:bg-secondary/50 rounded duration-500">NA</a></li>
+                  <li><a href="javascript:void(0);" data-slug="EUW" class="block p-2 hover:bg-secondary/50 rounded duration-500">EUW</a></li>
+                  <li><a href="javascript:void(0);" data-slug="EUNE" class="block p-2 hover:bg-secondary/50 rounded duration-500">EUNE</a></li>
+                  <li><a href="javascript:void(0);" data-slug="OCE" class="block p-2 hover:bg-secondary/50 rounded duration-500">OCE</a></li>
+                  <li><a href="javascript:void(0);" data-slug="TR" class="block p-2 hover:bg-secondary/50 rounded duration-500">TR</a></li>
+                  <li><a href="javascript:void(0);" data-slug="BR" class="block p-2 hover:bg-secondary/50 rounded duration-500">BR</a></li>
+                  <li><a href="javascript:void(0);" data-slug="LAS" class="block p-2 hover:bg-secondary/50 rounded duration-500">LAS</a></li>
+                  <li><a href="javascript:void(0);" data-slug="LAN" class="block p-2 hover:bg-secondary/50 rounded duration-500">LAN</a></li>
+                  <li><a href="javascript:void(0);" data-slug="RU" class="block p-2 hover:bg-secondary/50 rounded duration-500">RU</a></li>
                 </ul>
-                <a href="#" id="server-reset-btn" class="primary-btn reset-btn block text-center p-2 mt-2 bg-red-500 text-white rounded">Remover servidor</a>
               </div>
             </div>
           </div>
-          
-          <!-- <div class="filter-server flex flex-col w-full gap-2 lg:w-[32%] md:w-[45%] md:pb-10">
-            <label for="serverFilter" class="font-semibold text-lg">Server</label>
-            <select name="serverFilter" id="serverFilter" class="p-4 rounded-lg bg-[#1f1032]">
-              <option value="NA">NA</option>
-              <option value="EUW">EUW</option>
-              <option value="EUNE">EUNE</option>
-              <option value="OCE">OCE</option>
-              <option value="TR">TR</option>
-              <option value="BR" selected>BR</option>
-              <option value="LAS">LAS</option>
-              <option value="LAN">LAN</option>
-              <option value="RU">RU</option>
-            </select>
-          </div> -->
           <div class="filter-skin flex flex-col w-full gap-3 lg:w-[32%] md:w-[45%]">
             <div class="filter-skin__name flex flex-col gap-2 ">
             <label for="skinFilter" class="font-semibold text-lg">Skin</label>
@@ -219,194 +205,184 @@
                 <ion-icon name="chevron-down-outline" id="champions-chevron-icon" class="duration-500"></ion-icon>
               </div>            
               <div id="champions-select-list" class="select-list bg-[#1f1032] rounded-lg p-4 hidden absolute top-full left-0 right-0 z-10 border border-transparent">
-                <div class="input-block mb-2">
+                <a href="javascript:void(0);" id="server-reset-btn" class="block p-2 bg-primary/ hover:bg-secondary/50 rounded border-2 border-primary/50 duration-500">Remover campeão</a>
+                <div class="input-block my-2">
                   <input id="search-champions" type="text" name="search_servers" placeholder="Procure um campeão..." class="p-2 rounded bg-[#1f1032] text-white w-full outline-secondary border border-transparent focus:outline-none focus:ring-2 focus:ring-secondary">
                 </div>
                 <div id="champions-no-results" class="not-results hidden text-white">
                   <span>Nenhum resultado</span>
                 </div>
-                <ul id="champions-options" class="max-h-40 overflow-y-auto">
-                  <li><a href="javascript:void(0);" data-slug="aatrox" class="block p-2 hover:bg-secondary/50 rounded">Aatrox</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ahri" class="block p-2 hover:bg-secondary/50 rounded">Ahri</a></li>
-                  <li><a href="javascript:void(0);" data-slug="akali" class="block p-2 hover:bg-secondary/50 rounded">Akali</a></li>
-                  <li><a href="javascript:void(0);" data-slug="akshan" class="block p-2 hover:bg-secondary/50 rounded">Akshan</a></li>
-                  <li><a href="javascript:void(0);" data-slug="alistar" class="block p-2 hover:bg-secondary/50 rounded">Alistar</a></li>
-                  <li><a href="javascript:void(0);" data-slug="amumu" class="block p-2 hover:bg-secondary/50 rounded">Amumu</a></li>
-                  <li><a href="javascript:void(0);" data-slug="anivia" class="block p-2 hover:bg-secondary/50 rounded">Anivia</a></li>
-                  <li><a href="javascript:void(0);" data-slug="annie" class="block p-2 hover:bg-secondary/50 rounded">Annie</a></li>
-                  <li><a href="javascript:void(0);" data-slug="aphelios" class="block p-2 hover:bg-secondary/50 rounded">Aphelios</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ashe" class="block p-2 hover:bg-secondary/50 rounded">Ashe</a></li>
-                  <li><a href="javascript:void(0);" data-slug="aurelionsol" class="block p-2 hover:bg-secondary/50 rounded">Aurelion Sol</a></li>
-                  <li><a href="javascript:void(0);" data-slug="azir" class="block p-2 hover:bg-secondary/50 rounded">Azir</a></li>
-                  <li><a href="javascript:void(0);" data-slug="bardo" class="block p-2 hover:bg-secondary/50 rounded">Bardo</a></li>
-                  <li><a href="javascript:void(0);" data-slug="belveth" class="block p-2 hover:bg-secondary/50 rounded">Bel'Veth</a></li>
-                  <li><a href="javascript:void(0);" data-slug="blitzcrank" class="block p-2 hover:bg-secondary/50 rounded">Blitzcrank</a></li>
-                  <li><a href="javascript:void(0);" data-slug="brand" class="block p-2 hover:bg-secondary/50 rounded">Brand</a></li>
-                  <li><a href="javascript:void(0);" data-slug="braum" class="block p-2 hover:bg-secondary/50 rounded">Braum</a></li>
-                  <li><a href="javascript:void(0);" data-slug="briar" class="block p-2 hover:bg-secondary/50 rounded">Briar</a></li>
-                  <li><a href="javascript:void(0);" data-slug="caitlyn" class="block p-2 hover:bg-secondary/50 rounded">Caitlyn</a></li>
-                  <li><a href="javascript:void(0);" data-slug="camille" class="block p-2 hover:bg-secondary/50 rounded">Camille</a></li>
-                  <li><a href="javascript:void(0);" data-slug="cassiopeia" class="block p-2 hover:bg-secondary/50 rounded">Cassiopeia</a></li>
-                  <li><a href="javascript:void(0);" data-slug="chogath" class="block p-2 hover:bg-secondary/50 rounded">Cho'Gath</a></li>
-                  <li><a href="javascript:void(0);" data-slug="corki" class="block p-2 hover:bg-secondary/50 rounded">Corki</a></li>
-                  <li><a href="javascript:void(0);" data-slug="darius" class="block p-2 hover:bg-secondary/50 rounded">Darius</a></li>
-                  <li><a href="javascript:void(0);" data-slug="diana" class="block p-2 hover:bg-secondary/50 rounded">Diana</a></li>
-                  <li><a href="javascript:void(0);" data-slug="drmundo" class="block p-2 hover:bg-secondary/50 rounded">Dr. Mundo</a></li>
-                  <li><a href="javascript:void(0);" data-slug="draven" class="block p-2 hover:bg-secondary/50 rounded">Draven</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ekko" class="block p-2 hover:bg-secondary/50 rounded">Ekko</a></li>
-                  <li><a href="javascript:void(0);" data-slug="elise" class="block p-2 hover:bg-secondary/50 rounded">Elise</a></li>
-                  <li><a href="javascript:void(0);" data-slug="evelynn" class="block p-2 hover:bg-secondary/50 rounded">Evelynn</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ezreal" class="block p-2 hover:bg-secondary/50 rounded">Ezreal</a></li>
-                  <li><a href="javascript:void(0);" data-slug="fiddlesticks" class="block p-2 hover:bg-secondary/50 rounded">Fiddlesticks</a></li>
-                  <li><a href="javascript:void(0);" data-slug="fiora" class="block p-2 hover:bg-secondary/50 rounded">Fiora</a></li>
-                  <li><a href="javascript:void(0);" data-slug="fizz" class="block p-2 hover:bg-secondary/50 rounded">Fizz</a></li>
-                  <li><a href="javascript:void(0);" data-slug="galio" class="block p-2 hover:bg-secondary/50 rounded">Galio</a></li>
-                  <li><a href="javascript:void(0);" data-slug="gangplank" class="block p-2 hover:bg-secondary/50 rounded">Gangplank</a></li>
-                  <li><a href="javascript:void(0);" data-slug="garen" class="block p-2 hover:bg-secondary/50 rounded">Garen</a></li>
-                  <li><a href="javascript:void(0);" data-slug="gnar" class="block p-2 hover:bg-secondary/50 rounded">Gnar</a></li>
-                  <li><a href="javascript:void(0);" data-slug="gragas" class="block p-2 hover:bg-secondary/50 rounded">Gragas</a></li>
-                  <li><a href="javascript:void(0);" data-slug="graves" class="block p-2 hover:bg-secondary/50 rounded">Graves</a></li>
-                  <li><a href="javascript:void(0);" data-slug="gwen" class="block p-2 hover:bg-secondary/50 rounded">Gwen</a></li>
-                  <li><a href="javascript:void(0);" data-slug="hecarim" class="block p-2 hover:bg-secondary/50 rounded">Hecarim</a></li>
-                  <li><a href="javascript:void(0);" data-slug="heimerdinger" class="block p-2 hover:bg-secondary/50 rounded">Heimerdinger</a></li>
-                  <li><a href="javascript:void(0);" data-slug="hwei" class="block p-2 hover:bg-secondary/50 rounded">Hwei</a></li>
-                  <li><a href="javascript:void(0);" data-slug="illaoi" class="block p-2 hover:bg-secondary/50 rounded">Illaoi</a></li>
-                  <li><a href="javascript:void(0);" data-slug="irelia" class="block p-2 hover:bg-secondary/50 rounded">Irelia</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ivern" class="block p-2 hover:bg-secondary/50 rounded">Ivern</a></li>
-                  <li><a href="javascript:void(0);" data-slug="janna" class="block p-2 hover:bg-secondary/50 rounded">Janna</a></li>
-                  <li><a href="javascript:void(0);" data-slug="jarvaniv" class="block p-2 hover:bg-secondary/50 rounded">Jarvan IV</a></li>
-                  <li><a href="javascript:void(0);" data-slug="jax" class="block p-2 hover:bg-secondary/50 rounded">Jax</a></li>
-                  <li><a href="javascript:void(0);" data-slug="jayce" class="block p-2 hover:bg-secondary/50 rounded">Jayce</a></li>
-                  <li><a href="javascript:void(0);" data-slug="jhin" class="block p-2 hover:bg-secondary/50 rounded">Jhin</a></li>
-                  <li><a href="javascript:void(0);" data-slug="jinx" class="block p-2 hover:bg-secondary/50 rounded">Jinx</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ksante" class="block p-2 hover:bg-secondary/50 rounded">K'Sante</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kaisa" class="block p-2 hover:bg-secondary/50 rounded">Kai'Sa</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kalista" class="block p-2 hover:bg-secondary/50 rounded">Kalista</a></li>
-                  <li><a href="javascript:void(0);" data-slug="karma" class="block p-2 hover:bg-secondary/50 rounded">Karma</a></li>
-                  <li><a href="javascript:void(0);" data-slug="karthus" class="block p-2 hover:bg-secondary/50 rounded">Karthus</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kassadin" class="block p-2 hover:bg-secondary/50 rounded">Kassadin</a></li>
-                  <li><a href="javascript:void(0);" data-slug="katarina" class="block p-2 hover:bg-secondary/50 rounded">Katarina</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kayle" class="block p-2 hover:bg-secondary/50 rounded">Kayle</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kayn" class="block p-2 hover:bg-secondary/50 rounded">Kayn</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kennen" class="block p-2 hover:bg-secondary/50 rounded">Kennen</a></li>
-                  <li><a href="javascript:void(0);" data-slug="khazix" class="block p-2 hover:bg-secondary/50 rounded">Kha'Zix</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kindred" class="block p-2 hover:bg-secondary/50 rounded">Kindred</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kled" class="block p-2 hover:bg-secondary/50 rounded">Kled</a></li>
-                  <li><a href="javascript:void(0);" data-slug="kogmaw" class="block p-2 hover:bg-secondary/50 rounded">Kog'Maw</a></li>
-                  <li><a href="javascript:void(0);" data-slug="leblanc" class="block p-2 hover:bg-secondary/50 rounded">LeBlanc</a></li>
-                  <li><a href="javascript:void(0);" data-slug="leesin" class="block p-2 hover:bg-secondary/50 rounded">Lee Sin</a></li>
-                  <li><a href="javascript:void(0);" data-slug="leona" class="block p-2 hover:bg-secondary/50 rounded">Leona</a></li>
-                  <li><a href="javascript:void(0);" data-slug="lillia" class="block p-2 hover:bg-secondary/50 rounded">Lillia</a></li>
-                  <li><a href="javascript:void(0);" data-slug="lissandra" class="block p-2 hover:bg-secondary/50 rounded">Lissandra</a></li>
-                  <li><a href="javascript:void(0);" data-slug="lucian" class="block p-2 hover:bg-secondary/50 rounded">Lucian</a></li>
-                  <li><a href="javascript:void(0);" data-slug="lulu" class="block p-2 hover:bg-secondary/50 rounded">Lulu</a></li>
-                  <li><a href="javascript:void(0);" data-slug="lux" class="block p-2 hover:bg-secondary/50 rounded">Lux</a></li>
-                  <li><a href="javascript:void(0);" data-slug="malphite" class="block p-2 hover:bg-secondary/50 rounded">Malphite</a></li>
-                  <li><a href="javascript:void(0);" data-slug="malzahar" class="block p-2 hover:bg-secondary/50 rounded">Malzahar</a></li>
-                  <li><a href="javascript:void(0);" data-slug="maokai" class="block p-2 hover:bg-secondary/50 rounded">Maokai</a></li>
-                  <li><a href="javascript:void(0);" data-slug="masteryi" class="block p-2 hover:bg-secondary/50 rounded">Master Yi</a></li>
-                  <li><a href="javascript:void(0);" data-slug="milio" class="block p-2 hover:bg-secondary/50 rounded">Milio</a></li>
-                  <li><a href="javascript:void(0);" data-slug="missfortune" class="block p-2 hover:bg-secondary/50 rounded">Miss Fortune</a></li>
-                  <li><a href="javascript:void(0);" data-slug="mordekaiser" class="block p-2 hover:bg-secondary/50 rounded">Mordekaiser</a></li>
-                  <li><a href="javascript:void(0);" data-slug="morgana" class="block p-2 hover:bg-secondary/50 rounded">Morgana</a></li>
-                  <li><a href="javascript:void(0);" data-slug="naafiri" class="block p-2 hover:bg-secondary/50 rounded">Naafiri</a></li>
-                  <li><a href="javascript:void(0);" data-slug="nami" class="block p-2 hover:bg-secondary/50 rounded">Nami</a></li>
-                  <li><a href="javascript:void(0);" data-slug="nasus" class="block p-2 hover:bg-secondary/50 rounded">Nasus</a></li>
-                  <li><a href="javascript:void(0);" data-slug="nautilus" class="block p-2 hover:bg-secondary/50 rounded">Nautilus</a></li>
-                  <li><a href="javascript:void(0);" data-slug="neeko" class="block p-2 hover:bg-secondary/50 rounded">Neeko</a></li>
-                  <li><a href="javascript:void(0);" data-slug="nidalee" class="block p-2 hover:bg-secondary/50 rounded">Nidalee</a></li>
-                  <li><a href="javascript:void(0);" data-slug="nilah" class="block p-2 hover:bg-secondary/50 rounded">Nilah</a></li>
-                  <li><a href="javascript:void(0);" data-slug="nocturne" class="block p-2 hover:bg-secondary/50 rounded">Nocturne</a></li>
-                  <li><a href="javascript:void(0);" data-slug="nunuewillump" class="block p-2 hover:bg-secondary/50 rounded">Nunu e Willump</a></li>
-                  <li><a href="javascript:void(0);" data-slug="olaf" class="block p-2 hover:bg-secondary/50 rounded">Olaf</a></li>
-                  <li><a href="javascript:void(0);" data-slug="orianna" class="block p-2 hover:bg-secondary/50 rounded">Orianna</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ornn" class="block p-2 hover:bg-secondary/50 rounded">Ornn</a></li>
-                  <li><a href="javascript:void(0);" data-slug="pantheon" class="block p-2 hover:bg-secondary/50 rounded">Pantheon</a></li>
-                  <li><a href="javascript:void(0);" data-slug="poppy" class="block p-2 hover:bg-secondary/50 rounded">Poppy</a></li>
-                  <li><a href="javascript:void(0);" data-slug="pyke" class="block p-2 hover:bg-secondary/50 rounded">Pyke</a></li>
-                  <li><a href="javascript:void(0);" data-slug="qiyana" class="block p-2 hover:bg-secondary/50 rounded">Qiyana</a></li>
-                  <li><a href="javascript:void(0);" data-slug="quinn" class="block p-2 hover:bg-secondary/50 rounded">Quinn</a></li>
-                  <li><a href="javascript:void(0);" data-slug="rakan" class="block p-2 hover:bg-secondary/50 rounded">Rakan</a></li>
-                  <li><a href="javascript:void(0);" data-slug="rammus" class="block p-2 hover:bg-secondary/50 rounded">Rammus</a></li>
-                  <li><a href="javascript:void(0);" data-slug="reksai" class="block p-2 hover:bg-secondary/50 rounded">Rek'Sai</a></li>
-                  <li><a href="javascript:void(0);" data-slug="rell" class="block p-2 hover:bg-secondary/50 rounded">Rell</a></li>
-                  <li><a href="javascript:void(0);" data-slug="renataglasc" class="block p-2 hover:bg-secondary/50 rounded">Renata Glasc</a></li>
-                  <li><a href="javascript:void(0);" data-slug="rengar" class="block p-2 hover:bg-secondary/50 rounded">Rengar</a></li>
-                  <li><a href="javascript:void(0);" data-slug="riven" class="block p-2 hover:bg-secondary/50 rounded">Riven</a></li>
-                  <li><a href="javascript:void(0);" data-slug="rumble" class="block p-2 hover:bg-secondary/50 rounded">Rumble</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ryze" class="block p-2 hover:bg-secondary/50 rounded">Ryze</a></li>
-                  <li><a href="javascript:void(0);" data-slug="samira" class="block p-2 hover:bg-secondary/50 rounded">Samira</a></li>
-                  <li><a href="javascript:void(0);" data-slug="sejuani" class="block p-2 hover:bg-secondary/50 rounded">Sejuani</a></li>
-                  <li><a href="javascript:void(0);" data-slug="senna" class="block p-2 hover:bg-secondary/50 rounded">Senna</a></li>
-                  <li><a href="javascript:void(0);" data-slug="seraphine" class="block p-2 hover:bg-secondary/50 rounded">Seraphine</a></li>
-                  <li><a href="javascript:void(0);" data-slug="sett" class="block p-2 hover:bg-secondary/50 rounded">Sett</a></li>
-                  <li><a href="javascript:void(0);" data-slug="shaco" class="block p-2 hover:bg-secondary/50 rounded">Shaco</a></li>
-                  <li><a href="javascript:void(0);" data-slug="shen" class="block p-2 hover:bg-secondary/50 rounded">Shen</a></li>
-                  <li><a href="javascript:void(0);" data-slug="shyvana" class="block p-2 hover:bg-secondary/50 rounded">Shyvana</a></li>
-                  <li><a href="javascript:void(0);" data-slug="singed" class="block p-2 hover:bg-secondary/50 rounded">Singed</a></li>
-                  <li><a href="javascript:void(0);" data-slug="sion" class="block p-2 hover:bg-secondary/50 rounded">Sion</a></li>
-                  <li><a href="javascript:void(0);" data-slug="sivir" class="block p-2 hover:bg-secondary/50 rounded">Sivir</a></li>
-                  <li><a href="javascript:void(0);" data-slug="skarner" class="block p-2 hover:bg-secondary/50 rounded">Skarner</a></li>
-                  <li><a href="javascript:void(0);" data-slug="smolder" class="block p-2 hover:bg-secondary/50 rounded">Smolder</a></li>
-                  <li><a href="javascript:void(0);" data-slug="sona" class="block p-2 hover:bg-secondary/50 rounded">Sona</a></li>
-                  <li><a href="javascript:void(0);" data-slug="soraka" class="block p-2 hover:bg-secondary/50 rounded">Soraka</a></li>
-                  <li><a href="javascript:void(0);" data-slug="swain" class="block p-2 hover:bg-secondary/50 rounded">Swain</a></li>
-                  <li><a href="javascript:void(0);" data-slug="sylas" class="block p-2 hover:bg-secondary/50 rounded">Sylas</a></li>
-                  <li><a href="javascript:void(0);" data-slug="syndra" class="block p-2 hover:bg-secondary/50 rounded">Syndra</a></li>
-                  <li><a href="javascript:void(0);" data-slug="tahmkench" class="block p-2 hover:bg-secondary/50 rounded">Tahm Kench</a></li>
-                  <li><a href="javascript:void(0);" data-slug="taliyah" class="block p-2 hover:bg-secondary/50 rounded">Taliyah</a></li>
-                  <li><a href="javascript:void(0);" data-slug="talon" class="block p-2 hover:bg-secondary/50 rounded">Talon</a></li>
-                  <li><a href="javascript:void(0);" data-slug="taric" class="block p-2 hover:bg-secondary/50 rounded">Taric</a></li>
-                  <li><a href="javascript:void(0);" data-slug="teemo" class="block p-2 hover:bg-secondary/50 rounded">Teemo</a></li>
-                  <li><a href="javascript:void(0);" data-slug="thresh" class="block p-2 hover:bg-secondary/50 rounded">Thresh</a></li>
-                  <li><a href="javascript:void(0);" data-slug="tristana" class="block p-2 hover:bg-secondary/50 rounded">Tristana</a></li>
-                  <li><a href="javascript:void(0);" data-slug="trundle" class="block p-2 hover:bg-secondary/50 rounded">Trundle</a></li>
-                  <li><a href="javascript:void(0);" data-slug="tryndamere" class="block p-2 hover:bg-secondary/50 rounded">Tryndamere</a></li>
-                  <li><a href="javascript:void(0);" data-slug="twistedfate" class="block p-2 hover:bg-secondary/50 rounded">Twisted Fate</a></li>
-                  <li><a href="javascript:void(0);" data-slug="twitch" class="block p-2 hover:bg-secondary/50 rounded">Twitch</a></li>
-                  <li><a href="javascript:void(0);" data-slug="udyr" class="block p-2 hover:bg-secondary/50 rounded">Udyr</a></li>
-                  <li><a href="javascript:void(0);" data-slug="urgot" class="block p-2 hover:bg-secondary/50 rounded">Urgot</a></li>
-                  <li><a href="javascript:void(0);" data-slug="varus" class="block p-2 hover:bg-secondary/50 rounded">Varus</a></li>
-                  <li><a href="javascript:void(0);" data-slug="vayne" class="block p-2 hover:bg-secondary/50 rounded">Vayne</a></li>
-                  <li><a href="javascript:void(0);" data-slug="veigar" class="block p-2 hover:bg-secondary/50 rounded">Veigar</a></li>
-                  <li><a href="javascript:void(0);" data-slug="velkoz" class="block p-2 hover:bg-secondary/50 rounded">Vel'Koz</a></li>
-                  <li><a href="javascript:void(0);" data-slug="vi" class="block p-2 hover:bg-secondary/50 rounded">Vi</a></li>
-                  <li><a href="javascript:void(0);" data-slug="viego" class="block p-2 hover:bg-secondary/50 rounded">Viego</a></li>
-                  <li><a href="javascript:void(0);" data-slug="vex" class="block p-2 hover:bg-secondary/50 rounded">Vex</a></li>
-                  <li><a href="javascript:void(0);" data-slug="viktor" class="block p-2 hover:bg-secondary/50 rounded">Viktor</a></li>
-                  <li><a href="javascript:void(0);" data-slug="vladimir" class="block p-2 hover:bg-secondary/50 rounded">Vladimir</a></li>
-                  <li><a href="javascript:void(0);" data-slug="volibear" class="block p-2 hover:bg-secondary/50 rounded">Volibear</a></li>
-                  <li><a href="javascript:void(0);" data-slug="warwick" class="block p-2 hover:bg-secondary/50 rounded">Warwick</a></li>
-                  <li><a href="javascript:void(0);" data-slug="wukong" class="block p-2 hover:bg-secondary/50 rounded">Wukong</a></li>
-                  <li><a href="javascript:void(0);" data-slug="xayah" class="block p-2 hover:bg-secondary/50 rounded">Xayah</a></li>
-                  <li><a href="javascript:void(0);" data-slug="xerath" class="block p-2 hover:bg-secondary/50 rounded">Xerath</a></li>
-                  <li><a href="javascript:void(0);" data-slug="xinzhao" class="block p-2 hover:bg-secondary/50 rounded">Xin Zhao</a></li>
-                  <li><a href="javascript:void(0);" data-slug="yasuo" class="block p-2 hover:bg-secondary/50 rounded">Yasuo</a></li>
-                  <li><a href="javascript:void(0);" data-slug="yone" class="block p-2 hover:bg-secondary/50 rounded">Yone</a></li>
-                  <li><a href="javascript:void(0);" data-slug="yorick" class="block p-2 hover:bg-secondary/50 rounded">Yorick</a></li>
-                  <li><a href="javascript:void(0);" data-slug="yuumi" class="block p-2 hover:bg-secondary/50 rounded">Yuumi</a></li>
-                  <li><a href="javascript:void(0);" data-slug="zac" class="block p-2 hover:bg-secondary/50 rounded">Zac</a></li>
-                  <li><a href="javascript:void(0);" data-slug="zed" class="block p-2 hover:bg-secondary/50 rounded">Zed</a></li>
-                  <li><a href="javascript:void(0);" data-slug="zeri" class="block p-2 hover:bg-secondary/50 rounded">Zeri</a></li>
-                  <li><a href="javascript:void(0);" data-slug="ziggs" class="block p-2 hover:bg-secondary/50 rounded">Ziggs</a></li>
-                  <li><a href="javascript:void(0);" data-slug="zilean" class="block p-2 hover:bg-secondary/50 rounded">Zilean</a></li>
-                  <li><a href="javascript:void(0);" data-slug="zoe" class="block p-2 hover:bg-secondary/50 rounded">Zoe</a></li>
-                  <li><a href="javascript:void(0);" data-slug="zyra" class="block p-2 hover:bg-secondary/50 rounded">Zyra</a></li>
+                <ul id="champions-options" class="max-h-40 overflow-y-auto flex flex-col gap-1">
+                  <li><a href="javascript:void(0);" data-slug="all" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Todos</a></li>
+                  <li><a href="javascript:void(0);" data-slug="aatrox" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Aatrox</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ahri" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ahri</a></li>
+                  <li><a href="javascript:void(0);" data-slug="akali" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Akali</a></li>
+                  <li><a href="javascript:void(0);" data-slug="akshan" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Akshan</a></li>
+                  <li><a href="javascript:void(0);" data-slug="alistar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Alistar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="amumu" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Amumu</a></li>
+                  <li><a href="javascript:void(0);" data-slug="anivia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Anivia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="annie" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Annie</a></li>
+                  <li><a href="javascript:void(0);" data-slug="aphelios" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Aphelios</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ashe" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ashe</a></li>
+                  <li><a href="javascript:void(0);" data-slug="aurelionsol" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Aurelion Sol</a></li>
+                  <li><a href="javascript:void(0);" data-slug="azir" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Azir</a></li>
+                  <li><a href="javascript:void(0);" data-slug="bardo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Bardo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="belveth" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Bel'Veth</a></li>
+                  <li><a href="javascript:void(0);" data-slug="blitzcrank" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Blitzcrank</a></li>
+                  <li><a href="javascript:void(0);" data-slug="brand" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Brand</a></li>
+                  <li><a href="javascript:void(0);" data-slug="braum" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Braum</a></li>
+                  <li><a href="javascript:void(0);" data-slug="briar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Briar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="caitlyn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Caitlyn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="camille" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Camille</a></li>
+                  <li><a href="javascript:void(0);" data-slug="cassiopeia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Cassiopeia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="chogath" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Cho'Gath</a></li>
+                  <li><a href="javascript:void(0);" data-slug="corki" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Corki</a></li>
+                  <li><a href="javascript:void(0);" data-slug="darius" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Darius</a></li>
+                  <li><a href="javascript:void(0);" data-slug="diana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Diana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="drmundo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Dr. Mundo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="draven" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Draven</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ekko" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ekko</a></li>
+                  <li><a href="javascript:void(0);" data-slug="elise" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Elise</a></li>
+                  <li><a href="javascript:void(0);" data-slug="evelynn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Evelynn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ezreal" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ezreal</a></li>
+                  <li><a href="javascript:void(0);" data-slug="fiddlesticks" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Fiddlesticks</a></li>
+                  <li><a href="javascript:void(0);" data-slug="fiora" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Fiora</a></li>
+                  <li><a href="javascript:void(0);" data-slug="fizz" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Fizz</a></li>
+                  <li><a href="javascript:void(0);" data-slug="galio" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Galio</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gangplank" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gangplank</a></li>
+                  <li><a href="javascript:void(0);" data-slug="garen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Garen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gnar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gnar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gragas" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gragas</a></li>
+                  <li><a href="javascript:void(0);" data-slug="graves" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Graves</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gwen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gwen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="hecarim" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Hecarim</a></li>
+                  <li><a href="javascript:void(0);" data-slug="heimerdinger" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Heimerdinger</a></li>
+                  <li><a href="javascript:void(0);" data-slug="hwei" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Hwei</a></li>
+                  <li><a href="javascript:void(0);" data-slug="illaoi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Illaoi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="irelia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Irelia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ivern" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ivern</a></li>
+                  <li><a href="javascript:void(0);" data-slug="janna" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Janna</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jarvaniv" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jarvan IV</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jax" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jax</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jayce" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jayce</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jhin" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jhin</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jinx" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jinx</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ksante" class="block p-2 hover:bg-secondary/50 duration-500 rounded">K'Sante</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kaisa" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kai'Sa</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kalista" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kalista</a></li>
+                  <li><a href="javascript:void(0);" data-slug="karma" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Karma</a></li>
+                  <li><a href="javascript:void(0);" data-slug="karthus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Karthus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kassadin" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kassadin</a></li>
+                  <li><a href="javascript:void(0);" data-slug="katarina" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Katarina</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kayle" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kayle</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kayn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kayn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kennen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kennen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="khazix" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kha'Zix</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kindred" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kindred</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kled" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kled</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kogmaw" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kog'Maw</a></li>
+                  <li><a href="javascript:void(0);" data-slug="leblanc" class="block p-2 hover:bg-secondary/50 duration-500 rounded">LeBlanc</a></li>
+                  <li><a href="javascript:void(0);" data-slug="leesin" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lee Sin</a></li>
+                  <li><a href="javascript:void(0);" data-slug="leona" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Leona</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lillia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lillia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lissandra" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lissandra</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lucian" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lucian</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lulu" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lulu</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lux" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lux</a></li>
+                  <li><a href="javascript:void(0);" data-slug="malphite" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Malphite</a></li>
+                  <li><a href="javascript:void(0);" data-slug="malzahar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Malzahar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="maokai" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Maokai</a></li>
+                  <li><a href="javascript:void(0);" data-slug="masteryi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Master Yi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="milio" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Milio</a></li>
+                  <li><a href="javascript:void(0);" data-slug="missfortune" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Miss Fortune</a></li>
+                  <li><a href="javascript:void(0);" data-slug="mordekaiser" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Mordekaiser</a></li>
+                  <li><a href="javascript:void(0);" data-slug="morgana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Morgana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="naafiri" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Naafiri</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nami" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nami</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nasus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nasus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nautilus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nautilus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="neeko" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Neeko</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nidalee" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nidalee</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nilah" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nilah</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nocturne" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nocturne</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nunuewillump" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nunu e Willump</a></li>
+                  <li><a href="javascript:void(0);" data-slug="olaf" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Olaf</a></li>
+                  <li><a href="javascript:void(0);" data-slug="orianna" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Orianna</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ornn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ornn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="pantheon" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Pantheon</a></li>
+                  <li><a href="javascript:void(0);" data-slug="poppy" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Poppy</a></li>
+                  <li><a href="javascript:void(0);" data-slug="pyke" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Pyke</a></li>
+                  <li><a href="javascript:void(0);" data-slug="qiyana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Qiyana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="quinn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Quinn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rakan" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rakan</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rammus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rammus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="reksai" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rek'Sai</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rell" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rell</a></li>
+                  <li><a href="javascript:void(0);" data-slug="renataglasc" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Renata Glasc</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rengar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rengar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="riven" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Riven</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rumble" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rumble</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ryze" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ryze</a></li>
+                  <li><a href="javascript:void(0);" data-slug="samira" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Samira</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sejuani" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sejuani</a></li>
+                  <li><a href="javascript:void(0);" data-slug="senna" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Senna</a></li>
+                  <li><a href="javascript:void(0);" data-slug="seraphine" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Seraphine</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sett" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sett</a></li>
+                  <li><a href="javascript:void(0);" data-slug="shaco" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Shaco</a></li>
+                  <li><a href="javascript:void(0);" data-slug="shen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Shen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="shyvana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Shyvana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="singed" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Singed</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sion" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sion</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sivir" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sivir</a></li>
+                  <li><a href="javascript:void(0);" data-slug="skarner" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Skarner</a></li>
+                  <li><a href="javascript:void(0);" data-slug="smolder" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Smolder</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sona" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sona</a></li>
+                  <li><a href="javascript:void(0);" data-slug="soraka" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Soraka</a></li>
+                  <li><a href="javascript:void(0);" data-slug="swain" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Swain</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sylas" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sylas</a></li>
+                  <li><a href="javascript:void(0);" data-slug="syndra" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Syndra</a></li>
+                  <li><a href="javascript:void(0);" data-slug="tahmkench" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Tahm Kench</a></li>
+                  <li><a href="javascript:void(0);" data-slug="taliyah" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Taliyah</a></li>
+                  <li><a href="javascript:void(0);" data-slug="talon" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Talon</a></li>
+                  <li><a href="javascript:void(0);" data-slug="taric" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Taric</a></li>
+                  <li><a href="javascript:void(0);" data-slug="teemo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Teemo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="thresh" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Thresh</a></li>
+                  <li><a href="javascript:void(0);" data-slug="tristana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Tristana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="trundle" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Trundle</a></li>
+                  <li><a href="javascript:void(0);" data-slug="tryndamere" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Tryndamere</a></li>
+                  <li><a href="javascript:void(0);" data-slug="twistedfate" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Twisted Fate</a></li>
+                  <li><a href="javascript:void(0);" data-slug="twitch" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Twitch</a></li>
+                  <li><a href="javascript:void(0);" data-slug="udyr" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Udyr</a></li>
+                  <li><a href="javascript:void(0);" data-slug="urgot" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Urgot</a></li>
+                  <li><a href="javascript:void(0);" data-slug="varus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Varus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vayne" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vayne</a></li>
+                  <li><a href="javascript:void(0);" data-slug="veigar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Veigar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="velkoz" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vel'Koz</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="viego" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Viego</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vex" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vex</a></li>
+                  <li><a href="javascript:void(0);" data-slug="viktor" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Viktor</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vladimir" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vladimir</a></li>
+                  <li><a href="javascript:void(0);" data-slug="volibear" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Volibear</a></li>
+                  <li><a href="javascript:void(0);" data-slug="warwick" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Warwick</a></li>
+                  <li><a href="javascript:void(0);" data-slug="wukong" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Wukong</a></li>
+                  <li><a href="javascript:void(0);" data-slug="xayah" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Xayah</a></li>
+                  <li><a href="javascript:void(0);" data-slug="xerath" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Xerath</a></li>
+                  <li><a href="javascript:void(0);" data-slug="xinzhao" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Xin Zhao</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yasuo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yasuo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yone" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yone</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yorick" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yorick</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yuumi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yuumi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zac" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zac</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zed" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zed</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zeri" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zeri</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ziggs" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ziggs</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zilean" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zilean</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zoe" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zoe</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zyra" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zyra</a></li>
                 </ul>
-                <a href="#" id="champions-reset-btn" class="primary-btn reset-btn block text-center p-2 mt-2 bg-red-500 text-white rounded">Remover campeão</a>
               </div>
             </div>
-            <!-- <div class="filter-champion__text  flex flex-col  gap-2">
-              <label for="championFilter" class="font-semibold text-lg">Campeão</label>
-              <select name="championFilter" id="championFilter" class="p-4 rounded-lg bg-[#1f1032]">
-                <option value="all" selected>Todos</option>
-               <option value="aatrox">Aatrox</option>
-               <option value="ahri">Ahri</option>
-               <option value="yasuo">Yasuo</option>
-               <option value="velkoz">Vel'koz</option>
-               <option value="zed">Zed</option>
-              </select>
-            </div> -->
             <div class="filter-champion__quant">
               <label for="championFilterQuant" class="sr-only block"></label>
               <input type="range" name="championFilterQuant" id="championFilterQuant" min="0" max="158" value="1" oninput="updateNumberOfChampions(this.value)">
@@ -434,7 +410,7 @@
                 <input type="checkbox" id="iron-rank" name="iron-rank" value="iron-rank" class="filter-ranked__ranks-rank hidden peer">
                 <label for="iron-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
                   <div class="block">
-                    <div class="w-full text-lg font-semibold">Iron</div>
+                    <div class="w-full text-lg font-semibold">Ferro</div>
                 </div>
                       <div class="w-11">
                         <img src="../../../assets/ironElo.webp" alt="">
@@ -552,9 +528,178 @@
           </div>
         </div>
       </section>
-      <section class="accounts"></section>
-    </main>
-
+      <section class="accounts w-full">
+        <div class="accounts-wrap flex flex-col w-[90%] mx-auto max-w-[1280px]">
+        <ul class="accounts-list mt-4 flex flex-col gap-5 w-full flex-wrap sm:flex-row">
+          <li class="accounts-list__account iron flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/ironElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">EUW</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Ferro IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account bronze flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/bronzeElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Bronze IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account silver flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/silverElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Prata IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account gold flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/goldElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Ouro IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account platinum flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/platinumElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Platina IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+        </ul>
+      </div>
+      </section>
+    </main>3
     <footer class="bg-secondary/10 text-white mt-10 w-full">
       <div class="mx-auto max-w-screen-xl w-[90%] space-y-8 py-16 sm:px-6 lg:space-y-16">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">

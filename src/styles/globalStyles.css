@@ -8,7 +8,7 @@
 
 :root {
   --color-brand-1: #0f0822;
-  --color-brand-2: #AD00FF;
+  --color-brand-2: #ad00ff;
   --color-grey-1: #212529;
   --color-grey-2: #868e96;
   --color-grey-3: #adb5bd;
@@ -16,7 +16,6 @@
   --color-grey-5: #ced4da;
   --color-grey-6: #edf2ff;
   --color-white: #ffffff;
-  --brand-gradient:
 
   --font-text-1: 24px;
   --font-text-2: 18px;
@@ -29,21 +28,18 @@
   --border-radius-1: 40px;
 
   --bg-gradient: radial-gradient(
-    22.15% 456.25% at 94.74% 352.08%,
-    #0085ff 0,
-    rgba(90, 51, 218, 0) 100%
-  ),
-  radial-gradient(
-    30.19% 621.88% at 26.59% -352.6%,
-    #0085ff 0,
-    rgba(90, 51, 218, 0) 100%
-  ),
-  -webkit-gradient(linear, left top, right top, color-stop(29.9%, #750aa7), color-stop(88.98%, #ad00ff));
+      22.15% 456.25% at 94.74% 352.08%,
+      #0085ff 0,
+      rgba(90, 51, 218, 0) 100%
+    ),
+    radial-gradient(
+      30.19% 621.88% at 26.59% -352.6%,
+      #0085ff 0,
+      rgba(90, 51, 218, 0) 100%
+    ),
+    -webkit-gradient(linear, left top, right top, color-stop(29.9%, #750aa7), color-stop(88.98%, #ad00ff));
 }
-
 
 img {
   width: 100%;
 }
-
-

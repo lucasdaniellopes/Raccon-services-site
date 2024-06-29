@@ -6,6 +6,55 @@
   .header-navbar {
     @apply absolute md:static md:flex md:items-center  md:max-w-[1280px] md:justify-center h-full opacity-0  md:opacity-100 duration-500 bg-primary w-full md:bg-transparent;
   }
+  .iron {
+    @apply bg-[#6e7e8433] hover:shadow-glow hover:shadow-ironShadowColor;
+  }
+  .iron a {
+    @apply bg-[#313244];
+  }
+  .iron h3 {
+    @apply text-[#6E7E84];
+  }
+
+  .bronze {
+    @apply bg-gradient-to-r from-50% from-[#2E1917] to-secondary/[0.01] hover:shadow-glow hover:shadow-bronzeShadowColor;
+  }
+  .bronze a {
+    @apply bg-gradient-to-r  from-[#864E40] to-[#2C1F2C];
+  }
+  .bronze h3 {
+    @apply text-[#7C5B51];
+  }
+
+  .silver {
+    @apply bg-gradient-to-r from-70% from-[#221F35] to-[#1C1431] hover:shadow-glow hover:shadow-ironShadowColor;
+  }
+  .silver a {
+    @apply bg-gradient-to-r from-[#303044] to-[#271E3D];
+  }
+  .silver h3 {
+    @apply text-[#6E7E84];
+  }
+
+  .gold {
+    @apply bg-gradient-to-r from-50% from-[#3E322E] to-[#1C1431] hover:shadow-glow hover:shadow-goldShadowColor;
+  }
+  .gold a {
+    @apply bg-gradient-to-r from-[#AB804D] to-[#2C1F2C];
+  }
+  .gold h3 {
+    @apply text-[#F9DC5C];
+  }
+
+  .platinum {
+    @apply bg-gradient-to-r from-50% from-[#093E4C] to-[#1C1431] hover:shadow-glow hover:shadow-platinumShadowColor;
+  }
+  .platinum a {
+    @apply bg-gradient-to-r from-[#4FB5D8] to-[#271E3D];
+  }
+  .platinum h3 {
+    @apply text-[#97E7ED];
+  }
 
   .link {
     position: relative;
