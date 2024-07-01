@@ -14,7 +14,7 @@ module.exports = {
         goldShadowColor: "#86582F",
         platinumShadowColor: "#2B7692",
         emeraldShadowColor: "#054830",
-        diamondShadowColor: "#140A3E",
+        diamondShadowColor: "#30406E",
         masterShadowColor: "#9142CA",
         grandmasterShadowColor: "#7C2E35",
         challengerShadowColor: "#193E6B",

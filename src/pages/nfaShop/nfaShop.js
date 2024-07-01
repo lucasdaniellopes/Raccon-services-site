@@ -118,7 +118,6 @@ function championDropdown() {
         const selectedServer = option.textContent;
         selectTop.querySelector("span").textContent = selectedServer;
         selectTop.setAttribute("data-slug", option.getAttribute("data-slug"));
-        console.log(event.target);
         event.target.classList.toggle("bg-secondary");
         selectList.classList.add("hidden");
         chevronIcon.classList.remove("rotate-180");

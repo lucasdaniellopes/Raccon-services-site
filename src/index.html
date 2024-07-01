@@ -33,10 +33,10 @@
       <div
         class="header-wrapper md:container md:w-[90%] md:mx-auto xl:max-w-[1280px] flex justify-between text-white h-[150px] min-w-[385px]"
       >
-        <div class="header-logo min-w-[140px] max-w-[140px] ml-4 mt-4">
-          <a href="./index.html" class="w-full">
+        <div class="header-logo min-w-[140px] max-w-[140px] ml-4 mt-4 md:max-w-[100px] md:min-w-[100px] lg:min-w-[140px] lg:max-w-[140px]">
+          <a href="../../index.html" class="w-full">
             <img
-              src="../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png"
+              src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png"
               alt=""
               class="w-full"
             />
@@ -47,7 +47,7 @@
           id="navbar"
         >
           <ul
-            class=" hidden md:flex flex-col md:flex-row md:justify-between md:items-center gap-10 text-2xl h-full pl-14 font-semibold md:bg-transparent max-h-screen"
+            class="hidden  md:flex flex-col md:flex-row md:justify-between md:items-center gap-7 text-2xl md:text-lg pl-14 font-semibold md:bg-transparent max-h-screen"
             id="navbar-ul"
           >
             <li
@@ -56,8 +56,16 @@
               onmouseleave="changeHeaderArrow(this)"
             >
               <div class="drop-top flex items-center gap-3">
-                <a href="#" class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold">League of Legends</a>
-                <ion-icon name="caret-down" id="drop-arrow" class="hidden md:block"></ion-icon>
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold"
+                  >League of Legends</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
               </div>
 
               <ul
@@ -74,46 +82,56 @@
                   <a href="" class="">Contas Unranked</a>
                 </li>
                 <li
-                class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
-              >
-                <a href="./pages/nfaShop/nfaShop.html" class="">Contas NFA</a>
-              </li>
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
               </ul>
             </li>
 
             <li
-            class="drop relative group"
-            onmouseenter="changeHeaderArrow(this)"
-            onmouseleave="changeHeaderArrow(this)"
-          >
-            <div class="drop-top flex items-center gap-3">
-              <a href="#" class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold">Valorant</a>
-              <ion-icon name="caret-down" id="drop-arrow" class="hidden md:block"></ion-icon>
-            </div>
-
-            <ul
-              class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+              class="drop relative group"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
             >
-              <li
-                class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+              <div class="drop-top flex items-center gap-3">
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:font-semibold"
+                  >Valorant</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
+              </div>
+
+              <ul
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
               >
-                <a href="" class="">Contas Ranqueadas</a>
-              </li>
-              <li
-                class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                >
+                  <a href="" class="">Contas Ranqueadas</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas Unranked</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="https://presenteslol.com/index.php" class=""
+                >Presentes LoL</a
               >
-                <a href="" class="">Contas Unranked</a>
-              </li>
-              <li
-                class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
-              >
-                <a href="" class="">Contas NFA</a>
-              </li>
-            </ul>
-          </li>
-          <li class="header-navbar_opt hover:text-secondary duration-500">
-            <a href="https://presenteslol.com/index.php" class="">Presentes LoL</a>
-          </li>
+            </li>
             <li class="header-navbar_opt hover:text-secondary duration-500">
               <a href="#faq" class="">FAQ</a>
             </li>
