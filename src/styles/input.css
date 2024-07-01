@@ -56,6 +56,55 @@
     @apply text-[#97E7ED];
   }
 
+  .emerald {
+    @apply bg-gradient-to-r from-50% from-[#075232] to-[#1C1431] hover:shadow-glow hover:shadow-emeraldShadowColor;
+  }
+  .emerald a {
+    @apply bg-gradient-to-r from-[#18B14E] to-[#271E3D];
+  }
+  .emerald h3 {
+    @apply text-[#5FE2AE];
+  }
+
+  .diamond {
+    @apply bg-gradient-to-r from-50% from-[#2D2E6B] to-[#1C1431] hover:shadow-glow hover:shadow-diamondShadowColor;
+  }
+  .diamond a {
+    @apply bg-gradient-to-r from-[#3051AE] to-[#271E3D];
+  }
+  .diamond h3 {
+    @apply text-[#7CB8E1];
+  }
+
+  .master {
+    @apply bg-gradient-to-r from-50% from-[#9131D2] to-[#1C1431] hover:shadow-glow hover:shadow-masterShadowColor;
+  }
+  .master a {
+    @apply bg-gradient-to-r from-[#CD6BD1] to-[#271E3D];
+  }
+  .master h3 {
+    @apply text-[#F58AF5];
+  }
+  .grandmaster {
+    @apply bg-gradient-to-r from-50% from-[#832825] to-[#1C1431] hover:shadow-glow hover:shadow-grandmasterShadowColor;
+  }
+  .grandmaster a {
+    @apply bg-gradient-to-r from-[#BE431C] to-[#271E3D];
+  }
+  .grandmaster h3 {
+    @apply text-[#DEAA6D];
+  }
+
+  .challenger {
+    @apply bg-gradient-to-r from-50% from-[#694821] to-[#1C1431] hover:shadow-glow hover:shadow-challengerShadowColor;
+  }
+  .challenger a {
+    @apply bg-gradient-to-r from-[#05568B] to-[#271E3D];
+  }
+  .challenger h3 {
+    @apply text-[#A6DEE6];
+  }
+
   .link {
     position: relative;
     overflow: hidden;

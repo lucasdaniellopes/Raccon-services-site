@@ -148,8 +148,11 @@
         ></ion-icon>
       </div>
     </header>
-    <main class="pt-[70px] md:pt-[200px] text-white flex flex-col items-center w-full">
+    <main class="pt-[70px] md:pt-[200px] text-white flex flex-col items-center w-full relative pb-[200px]">
       <h1 class="font-bold text-3xl mb-14">Loja NFA</h1>
+      <div class="bg-img1 absolute right-0 top-[120px] 2xl:w-[462px] w-[300px] xl:w-[300px] xl:block hidden">
+        <img src="../../../assets/kennem.webp" alt="">
+      </div>
       <section class="filter flex flex-col justify-center gap-6  w-[90%] mx-auto max-w-[1280px] rounded-2xl bg-gradient-to-r from-[#15082B] to-[#0f0822]">
         <a href="#" class="inline-block self-center pt-6 md:pt-10 text-secondary cursor-pointer font-semibold text-base">Resetar filtros</a>
         <div class="filter-filters flex justify-center items-center flex-wrap gap-4 md:flex-row p-6 md:p-10 lg:justify-start">
@@ -696,11 +699,179 @@
             </div>
             <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
           </li>
+          <li class="accounts-list__account emerald flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/emeraldElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Esmeralda IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account diamond flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/diamondElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Diamante IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account master flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/masterElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Mestre</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account grandmaster flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/grandmasterElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Grãomestre</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account challenger flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/challengerElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Desafiante</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
         </ul>
       </div>
       </section>
-    </main>3
-    <footer class="bg-secondary/10 text-white mt-10 w-full">
+      <div class="bg-img2 absolute left-0 bottom-0 2xl:w-[300px] xl:w-[200px] xl:block hidden">
+        <img src="../../../assets/foot-bg-1.webp" alt="">
+      </div>
+    </main>
+    <footer class="bg-secondary/10 text-white w-full">
       <div class="mx-auto max-w-screen-xl w-[90%] space-y-8 py-16 sm:px-6 lg:space-y-16">
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
