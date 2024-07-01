@@ -2105,6 +2105,10 @@ input[type="range"]::-moz-range-thumb {
     margin-top: 200px;
   }
 
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:block {
     display: block;
   }
