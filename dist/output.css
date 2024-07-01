@@ -640,7 +640,7 @@ video {
   --tw-gradient-to: rgb(46 25 23 / 0) var(--tw-gradient-to-position);
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
   --tw-gradient-from-position: 50%;
-  --tw-gradient-to: rgb(173 0 255 / 0.01) var(--tw-gradient-to-position);
+  --tw-gradient-to: #1C1431 var(--tw-gradient-to-position);
 }
 
 .bronze:hover {
@@ -1715,8 +1715,8 @@ video {
   padding-bottom: 30px;
 }
 
-.pb-\[200px\] {
-  padding-bottom: 200px;
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .pl-14 {
@@ -1745,14 +1745,6 @@ video {
 
 .pt-\[70px\] {
   padding-top: 70px;
-}
-
-.pb-\[300px\] {
-  padding-bottom: 300px;
-}
-
-.pb-12 {
-  padding-bottom: 3rem;
 }
 
 .text-center {
@@ -2337,12 +2329,12 @@ input[type="range"]::-moz-range-thumb {
     width: 32%;
   }
 
-  .lg\:min-w-\[23\%\] {
-    min-width: 23%;
-  }
-
   .lg\:min-w-\[140px\] {
     min-width: 140px;
+  }
+
+  .lg\:min-w-\[23\%\] {
+    min-width: 23%;
   }
 
   .lg\:max-w-\[140px\] {
@@ -2418,14 +2410,6 @@ input[type="range"]::-moz-range-thumb {
 
   .xl\:pb-\[300px\] {
     padding-bottom: 300px;
-  }
-
-  .xl\:pb-\[400px\] {
-    padding-bottom: 400px;
-  }
-
-  .xl\:pb-\[200px\] {
-    padding-bottom: 200px;
   }
 }
 

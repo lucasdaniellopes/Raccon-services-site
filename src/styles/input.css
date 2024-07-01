@@ -17,7 +17,7 @@
   }
 
   .bronze {
-    @apply bg-gradient-to-r from-50% from-[#2E1917] to-secondary/[0.01] hover:shadow-glow hover:shadow-bronzeShadowColor;
+    @apply bg-gradient-to-r from-50% from-[#2E1917] to-[#1C1431] hover:shadow-glow hover:shadow-bronzeShadowColor;
   }
   .bronze a {
     @apply bg-gradient-to-r  from-[#864E40] to-[#2C1F2C];
