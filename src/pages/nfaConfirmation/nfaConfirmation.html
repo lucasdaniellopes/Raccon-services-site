@@ -1,0 +1,1030 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../../assets/favicon_io (1)/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../dist/output.css" />
+    <link rel="stylesheet" href="../../index.css" />
+
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="../../index.js"></script>
+    <script defer src="./nfaShop.js"></script>
+    <title>Raccoon LoL NFA Confirmation</title>
+  </head>
+  <body class="bg-primary flex flex-col">
+    <header class="md:absolute left-0 w-full z-[1000]">
+      <div
+        class="header-wrapper md:container md:w-[90%] md:mx-auto xl:max-w-[1280px] flex justify-between text-white h-[150px] min-w-[385px]"
+      >
+        <div class="header-logo min-w-[140px] max-w-[140px] ml-4 mt-4 md:max-w-[100px] md:min-w-[100px] lg:min-w-[140px] lg:max-w-[140px]">
+          <a href="../../index.html" class="w-full">
+            <img
+              src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png"
+              alt=""
+              class="w-full"
+            />
+          </a>
+        </div>
+        <nav
+          class="header-navbar  md:bottom-0 z-[5] md:bg-transparent md:justify-end h-[105vh] md:h-auto bottom-[-100%] left-[-100%]"
+          id="navbar"
+        >
+          <ul
+            class="hidden  md:flex flex-col md:flex-row md:justify-between md:items-center gap-7 text-2xl md:text-lg lg:text-2xl pl-14 font-semibold md:bg-transparent max-h-screen"
+            id="navbar-ul"
+          >
+            <li
+              class="drop relative group"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
+            >
+              <div class="drop-top flex items-center gap-3">
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:mb-0 md:font-semibold"
+                  >League of Legends</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
+              </div>
+
+              <ul
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+              >
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                >
+                  <a href="" class="">Contas Ranqueadas</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas Unranked</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
+              </ul>
+            </li>
+
+            <li
+              class="drop relative group"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
+            >
+              <div class="drop-top flex items-center gap-3">
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:mb-0 md:font-semibold"
+                  >Valorant</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
+              </div>
+
+              <ul
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+              >
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                >
+                  <a href="" class="">Contas Ranqueadas</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas Unranked</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="https://presenteslol.com/index.php" class=""
+                >Presentes LoL</a
+              >
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="#faq" class="">FAQ</a>
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="" class="">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          id="menu"
+          name="menu"
+          class="text-[40px] mt-6 md:hidden cursor-pointer mr-[4%]"
+        ></ion-icon>
+      </div>
+    </header>
+    <main class="pt-[70px] md:pt-[200px] text-white flex flex-col items-center w-full relative 2xl:pb-[400px] xl:pb-[300px] pb-12">
+      <h1 class="font-bold text-3xl mb-14">Loja NFA</h1>
+      <div class="bg-img1 absolute right-0 top-[120px] 2xl:w-[462px] w-[300px] xl:w-[300px] xl:block hidden">
+        <img src="../../../assets/kennem.webp" alt="">
+      </div>
+      <section class="filter flex flex-col justify-center gap-6  w-[90%] mx-auto max-w-[1280px] rounded-2xl bg-gradient-to-r from-[#15082B] to-[#0f0822]">
+        <a href="#" class="inline-block self-center pt-6 md:pt-10 text-secondary cursor-pointer font-semibold text-base">Resetar filtros</a>
+        <div class="filter-filters flex justify-center items-center flex-wrap gap-4 md:flex-row p-6 md:p-10 lg:justify-start">
+          <div class="filter-server flex flex-col w-full gap-2 lg:w-[32%] md:w-[45%] md:pb-10">
+            <label for="serverFilter" class="font-semibold text-lg">Servidor</label>
+            <div class="select select-big relative">
+              <div id="server-select-top" class="select-top cursor-pointer p-4 bg-[#1f1032] rounded-lg text-white flex justify-between items-center" data-slug="BR">
+                <span>BR</span>
+                <ion-icon name="chevron-down-outline" id="server-chevron-icon" class="duration-500"></ion-icon>
+              </div>            
+              <div id="server-select-list" class="select-list bg-[#1f1032] rounded-lg p-4 hidden absolute top-full left-0 right-0 z-10 border border-transparent">
+                <a href="javascript:void(0);" id="server-reset-btn" class="block p-2 bg-[#1f1032] hover:bg-secondary/50 rounded duration-500">Remover servidor</a>
+                <div class="input-block my-2">
+                  <input id="search-servers" type="text" name="search_servers" placeholder="Procure um servidor..." class="p-2 rounded bg-[#1f1032] text-white w-full outline-secondary border border-transparent focus:outline-none focus:ring-2 focus:ring-secondary">
+                </div>
+                <div id="server-no-results" class="not-results hidden text-white">
+                  <span>Nenhum resultado</span>
+                </div>
+                <ul id="server-options" class="max-h-40 overflow-y-auto flex flex-col gap-1">
+                  <li><a href="javascript:void(0);" data-slug="all" class="block p-2 hover:bg-secondary/50 rounded duration-500">Todos</a></li>
+                  <li><a href="javascript:void(0);" data-slug="NA" class="block p-2 hover:bg-secondary/50 rounded duration-500">NA</a></li>
+                  <li><a href="javascript:void(0);" data-slug="EUW" class="block p-2 hover:bg-secondary/50 rounded duration-500">EUW</a></li>
+                  <li><a href="javascript:void(0);" data-slug="EUNE" class="block p-2 hover:bg-secondary/50 rounded duration-500">EUNE</a></li>
+                  <li><a href="javascript:void(0);" data-slug="OCE" class="block p-2 hover:bg-secondary/50 rounded duration-500">OCE</a></li>
+                  <li><a href="javascript:void(0);" data-slug="TR" class="block p-2 hover:bg-secondary/50 rounded duration-500">TR</a></li>
+                  <li><a href="javascript:void(0);" data-slug="BR" class="block p-2 hover:bg-secondary/50 rounded duration-500">BR</a></li>
+                  <li><a href="javascript:void(0);" data-slug="LAS" class="block p-2 hover:bg-secondary/50 rounded duration-500">LAS</a></li>
+                  <li><a href="javascript:void(0);" data-slug="LAN" class="block p-2 hover:bg-secondary/50 rounded duration-500">LAN</a></li>
+                  <li><a href="javascript:void(0);" data-slug="RU" class="block p-2 hover:bg-secondary/50 rounded duration-500">RU</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="filter-skin flex flex-col w-full gap-3 lg:w-[32%] md:w-[45%]">
+            <div class="filter-skin__name flex flex-col gap-2 ">
+            <label for="skinFilter" class="font-semibold text-lg">Skin</label>
+            <input type="text" name="skinFilter" id="skinFilter" class="p-4 rounded-lg bg-[#1f1032]" placeholder="Digite o nome da skin">
+            </div>
+            <div class="filter-skin__quant">
+            <label for="skinFilterQuant" class="sr-only block"></label>
+            <input type="range" name="skinFilterQuant" id="skinFilterQuant" min="0" max="1630" value="1" oninput="updateNumberOfSkins(this.value)">
+            <div class="flex justify-between">
+              <span id="minNumberOfSkins">0</span>
+              <span id="maxNumberOfSkins">1630</span>
+            </div>
+            </div>
+          </div>
+          <div class="filter-champion flex flex-col  w-full gap-3 lg:w-[32%] md:w-[45%]">
+            <label for="championFilter" class="font-semibold text-lg">Campeão</label>
+            <div class="select select-big relative">
+              <div id="champion-select-top" class="select-top cursor-pointer p-4 bg-[#1f1032] rounded-lg text-white flex justify-between items-center" data-slug="all">
+                <span>Todos</span>
+                <ion-icon name="chevron-down-outline" id="champions-chevron-icon" class="duration-500"></ion-icon>
+              </div>            
+              <div id="champions-select-list" class="select-list bg-[#1f1032] rounded-lg p-4 hidden absolute top-full left-0 right-0 z-10 border border-transparent">
+                <a href="javascript:void(0);" id="champions-reset-btn" class="block p-2 bg-primary/ hover:bg-secondary/50 rounded duration-500">Remover campeão</a>
+                <div class="input-block my-2">
+                  <input id="search-champions" type="text" name="search_servers" placeholder="Procure um campeão..." class="p-2 rounded bg-[#1f1032] text-white w-full outline-secondary border border-transparent focus:outline-none focus:ring-2 focus:ring-secondary">
+                </div>
+                <div id="champions-no-results" class="not-results hidden text-white">
+                  <span>Nenhum resultado</span>
+                </div>
+                <ul id="champions-options" class="max-h-40 overflow-y-auto flex flex-col gap-1">
+                  <li><a href="javascript:void(0);" data-slug="all" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Todos</a></li>
+                  <li><a href="javascript:void(0);" data-slug="aatrox" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Aatrox</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ahri" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ahri</a></li>
+                  <li><a href="javascript:void(0);" data-slug="akali" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Akali</a></li>
+                  <li><a href="javascript:void(0);" data-slug="akshan" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Akshan</a></li>
+                  <li><a href="javascript:void(0);" data-slug="alistar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Alistar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="amumu" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Amumu</a></li>
+                  <li><a href="javascript:void(0);" data-slug="anivia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Anivia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="annie" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Annie</a></li>
+                  <li><a href="javascript:void(0);" data-slug="aphelios" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Aphelios</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ashe" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ashe</a></li>
+                  <li><a href="javascript:void(0);" data-slug="aurelionsol" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Aurelion Sol</a></li>
+                  <li><a href="javascript:void(0);" data-slug="azir" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Azir</a></li>
+                  <li><a href="javascript:void(0);" data-slug="bardo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Bardo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="belveth" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Bel'Veth</a></li>
+                  <li><a href="javascript:void(0);" data-slug="blitzcrank" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Blitzcrank</a></li>
+                  <li><a href="javascript:void(0);" data-slug="brand" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Brand</a></li>
+                  <li><a href="javascript:void(0);" data-slug="braum" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Braum</a></li>
+                  <li><a href="javascript:void(0);" data-slug="briar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Briar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="caitlyn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Caitlyn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="camille" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Camille</a></li>
+                  <li><a href="javascript:void(0);" data-slug="cassiopeia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Cassiopeia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="chogath" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Cho'Gath</a></li>
+                  <li><a href="javascript:void(0);" data-slug="corki" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Corki</a></li>
+                  <li><a href="javascript:void(0);" data-slug="darius" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Darius</a></li>
+                  <li><a href="javascript:void(0);" data-slug="diana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Diana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="drmundo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Dr. Mundo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="draven" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Draven</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ekko" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ekko</a></li>
+                  <li><a href="javascript:void(0);" data-slug="elise" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Elise</a></li>
+                  <li><a href="javascript:void(0);" data-slug="evelynn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Evelynn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ezreal" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ezreal</a></li>
+                  <li><a href="javascript:void(0);" data-slug="fiddlesticks" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Fiddlesticks</a></li>
+                  <li><a href="javascript:void(0);" data-slug="fiora" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Fiora</a></li>
+                  <li><a href="javascript:void(0);" data-slug="fizz" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Fizz</a></li>
+                  <li><a href="javascript:void(0);" data-slug="galio" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Galio</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gangplank" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gangplank</a></li>
+                  <li><a href="javascript:void(0);" data-slug="garen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Garen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gnar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gnar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gragas" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gragas</a></li>
+                  <li><a href="javascript:void(0);" data-slug="graves" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Graves</a></li>
+                  <li><a href="javascript:void(0);" data-slug="gwen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Gwen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="hecarim" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Hecarim</a></li>
+                  <li><a href="javascript:void(0);" data-slug="heimerdinger" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Heimerdinger</a></li>
+                  <li><a href="javascript:void(0);" data-slug="hwei" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Hwei</a></li>
+                  <li><a href="javascript:void(0);" data-slug="illaoi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Illaoi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="irelia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Irelia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ivern" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ivern</a></li>
+                  <li><a href="javascript:void(0);" data-slug="janna" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Janna</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jarvaniv" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jarvan IV</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jax" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jax</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jayce" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jayce</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jhin" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jhin</a></li>
+                  <li><a href="javascript:void(0);" data-slug="jinx" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Jinx</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ksante" class="block p-2 hover:bg-secondary/50 duration-500 rounded">K'Sante</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kaisa" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kai'Sa</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kalista" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kalista</a></li>
+                  <li><a href="javascript:void(0);" data-slug="karma" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Karma</a></li>
+                  <li><a href="javascript:void(0);" data-slug="karthus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Karthus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kassadin" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kassadin</a></li>
+                  <li><a href="javascript:void(0);" data-slug="katarina" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Katarina</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kayle" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kayle</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kayn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kayn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kennen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kennen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="khazix" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kha'Zix</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kindred" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kindred</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kled" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kled</a></li>
+                  <li><a href="javascript:void(0);" data-slug="kogmaw" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Kog'Maw</a></li>
+                  <li><a href="javascript:void(0);" data-slug="leblanc" class="block p-2 hover:bg-secondary/50 duration-500 rounded">LeBlanc</a></li>
+                  <li><a href="javascript:void(0);" data-slug="leesin" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lee Sin</a></li>
+                  <li><a href="javascript:void(0);" data-slug="leona" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Leona</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lillia" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lillia</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lissandra" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lissandra</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lucian" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lucian</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lulu" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lulu</a></li>
+                  <li><a href="javascript:void(0);" data-slug="lux" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Lux</a></li>
+                  <li><a href="javascript:void(0);" data-slug="malphite" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Malphite</a></li>
+                  <li><a href="javascript:void(0);" data-slug="malzahar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Malzahar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="maokai" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Maokai</a></li>
+                  <li><a href="javascript:void(0);" data-slug="masteryi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Master Yi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="milio" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Milio</a></li>
+                  <li><a href="javascript:void(0);" data-slug="missfortune" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Miss Fortune</a></li>
+                  <li><a href="javascript:void(0);" data-slug="mordekaiser" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Mordekaiser</a></li>
+                  <li><a href="javascript:void(0);" data-slug="morgana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Morgana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="naafiri" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Naafiri</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nami" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nami</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nasus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nasus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nautilus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nautilus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="neeko" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Neeko</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nidalee" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nidalee</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nilah" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nilah</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nocturne" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nocturne</a></li>
+                  <li><a href="javascript:void(0);" data-slug="nunuewillump" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Nunu e Willump</a></li>
+                  <li><a href="javascript:void(0);" data-slug="olaf" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Olaf</a></li>
+                  <li><a href="javascript:void(0);" data-slug="orianna" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Orianna</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ornn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ornn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="pantheon" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Pantheon</a></li>
+                  <li><a href="javascript:void(0);" data-slug="poppy" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Poppy</a></li>
+                  <li><a href="javascript:void(0);" data-slug="pyke" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Pyke</a></li>
+                  <li><a href="javascript:void(0);" data-slug="qiyana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Qiyana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="quinn" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Quinn</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rakan" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rakan</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rammus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rammus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="reksai" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rek'Sai</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rell" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rell</a></li>
+                  <li><a href="javascript:void(0);" data-slug="renataglasc" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Renata Glasc</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rengar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rengar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="riven" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Riven</a></li>
+                  <li><a href="javascript:void(0);" data-slug="rumble" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Rumble</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ryze" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ryze</a></li>
+                  <li><a href="javascript:void(0);" data-slug="samira" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Samira</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sejuani" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sejuani</a></li>
+                  <li><a href="javascript:void(0);" data-slug="senna" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Senna</a></li>
+                  <li><a href="javascript:void(0);" data-slug="seraphine" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Seraphine</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sett" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sett</a></li>
+                  <li><a href="javascript:void(0);" data-slug="shaco" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Shaco</a></li>
+                  <li><a href="javascript:void(0);" data-slug="shen" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Shen</a></li>
+                  <li><a href="javascript:void(0);" data-slug="shyvana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Shyvana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="singed" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Singed</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sion" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sion</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sivir" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sivir</a></li>
+                  <li><a href="javascript:void(0);" data-slug="skarner" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Skarner</a></li>
+                  <li><a href="javascript:void(0);" data-slug="smolder" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Smolder</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sona" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sona</a></li>
+                  <li><a href="javascript:void(0);" data-slug="soraka" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Soraka</a></li>
+                  <li><a href="javascript:void(0);" data-slug="swain" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Swain</a></li>
+                  <li><a href="javascript:void(0);" data-slug="sylas" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Sylas</a></li>
+                  <li><a href="javascript:void(0);" data-slug="syndra" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Syndra</a></li>
+                  <li><a href="javascript:void(0);" data-slug="tahmkench" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Tahm Kench</a></li>
+                  <li><a href="javascript:void(0);" data-slug="taliyah" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Taliyah</a></li>
+                  <li><a href="javascript:void(0);" data-slug="talon" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Talon</a></li>
+                  <li><a href="javascript:void(0);" data-slug="taric" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Taric</a></li>
+                  <li><a href="javascript:void(0);" data-slug="teemo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Teemo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="thresh" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Thresh</a></li>
+                  <li><a href="javascript:void(0);" data-slug="tristana" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Tristana</a></li>
+                  <li><a href="javascript:void(0);" data-slug="trundle" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Trundle</a></li>
+                  <li><a href="javascript:void(0);" data-slug="tryndamere" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Tryndamere</a></li>
+                  <li><a href="javascript:void(0);" data-slug="twistedfate" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Twisted Fate</a></li>
+                  <li><a href="javascript:void(0);" data-slug="twitch" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Twitch</a></li>
+                  <li><a href="javascript:void(0);" data-slug="udyr" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Udyr</a></li>
+                  <li><a href="javascript:void(0);" data-slug="urgot" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Urgot</a></li>
+                  <li><a href="javascript:void(0);" data-slug="varus" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Varus</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vayne" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vayne</a></li>
+                  <li><a href="javascript:void(0);" data-slug="veigar" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Veigar</a></li>
+                  <li><a href="javascript:void(0);" data-slug="velkoz" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vel'Koz</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="viego" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Viego</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vex" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vex</a></li>
+                  <li><a href="javascript:void(0);" data-slug="viktor" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Viktor</a></li>
+                  <li><a href="javascript:void(0);" data-slug="vladimir" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Vladimir</a></li>
+                  <li><a href="javascript:void(0);" data-slug="volibear" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Volibear</a></li>
+                  <li><a href="javascript:void(0);" data-slug="warwick" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Warwick</a></li>
+                  <li><a href="javascript:void(0);" data-slug="wukong" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Wukong</a></li>
+                  <li><a href="javascript:void(0);" data-slug="xayah" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Xayah</a></li>
+                  <li><a href="javascript:void(0);" data-slug="xerath" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Xerath</a></li>
+                  <li><a href="javascript:void(0);" data-slug="xinzhao" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Xin Zhao</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yasuo" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yasuo</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yone" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yone</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yorick" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yorick</a></li>
+                  <li><a href="javascript:void(0);" data-slug="yuumi" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Yuumi</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zac" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zac</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zed" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zed</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zeri" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zeri</a></li>
+                  <li><a href="javascript:void(0);" data-slug="ziggs" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Ziggs</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zilean" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zilean</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zoe" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zoe</a></li>
+                  <li><a href="javascript:void(0);" data-slug="zyra" class="block p-2 hover:bg-secondary/50 duration-500 rounded">Zyra</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="filter-champion__quant">
+              <label for="championFilterQuant" class="sr-only block"></label>
+              <input type="range" name="championFilterQuant" id="championFilterQuant" min="0" max="158" value="1" oninput="updateNumberOfChampions(this.value)">
+              <div class="flex justify-between">
+                <span id="minNumberOfChampions">0</span>
+                <span id="maxNumberOfChampions">168</span>
+              </div>
+              </div>
+          </div>
+          <div class="filter-price flex flex-col w-full gap-2 mt-5 border-2 border-secondary p-3 rounded-lg lg:w-[32%] md:w-[45%] justify-self-start">
+            <label for="filterPrice" class="font-semibold text-lg">Preço</label>
+            <input type="range" name="filterPrice" id="filterPrice" min="0" max="3800" value="1" oninput="updatePrice(this.value)">
+            <div class="flex justify-between">
+              <span id="minPrice">0 RP</span>
+              <span id="maxPrice">3800 RP</span>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="filter-ranked p-6 md:p10 pt-0">
+            <span class="font-semibold text-xl">Elo</span>
+            <ul class="filter-ranked__ranks w-full gap-6 md:grid-cols-2 flex flex-col justify-center md:flex-row md:flex-wrap md:justify-start mt-2">
+              <li class="lg:basis-[18%] ">
+                
+                <input type="checkbox" id="iron-rank" name="iron-rank" value="iron-rank" class="filter-ranked__ranks-rank hidden peer">
+                <label for="iron-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                  <div class="block">
+                    <div class="w-full text-lg font-semibold">Ferro</div>
+                </div>
+                      <div class="w-11">
+                        <img src="../../../assets/ironElo.webp" alt="">
+                      </div>
+                  </label>
+              </li>
+              <li class="lg:basis-[18%] ">
+                  <input type="checkbox" id="bronze-rank" name="bronze-rank" value="bronze-rank" class="filter-ranked__ranks-rank hidden peer group">
+                  <label for="bronze-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                      <div class="block">
+                          <div class="w-full text-lg font-semibold">Bronze</div>
+                      </div>
+                      <div class="w-11">
+                        <img src="../../../assets/bronzeElo.webp" alt="">
+                      </div>
+                  </label>
+              </li>
+              <li class="lg:basis-[18%] ">
+                <input type="checkbox" id="silver-rank" name="silver-rank" value="silver-rank" class="filter-ranked__ranks-rank hidden peer">
+                <label for="silver-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                    <div class="block">
+                        <div class="w-full text-lg font-semibold">Prata</div>
+                        
+                    </div>
+                    <div class="w-11">
+                      <img src="../../../assets/silverElo.webp" alt="">
+                    </div>
+                </label>
+            </li>
+            <li class="lg:basis-[18%] ">
+              <input type="checkbox" id="gold-rank" name="gold-rank" value="gold-rank" class="filter-ranked__ranks-rank hidden peer">
+              <label for="gold-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                  <div class="block">
+                      <div class="w-full text-lg font-semibold">Ouro</div>
+                     
+                  </div>
+                  <div class="w-11">
+                    <img src="../../../assets/goldElo.webp" alt="">
+                  </div>
+              </label>
+          </li>
+          <li class="lg:basis-[18%] ">
+            <input type="checkbox" id="platinum-rank" name="rank" value="platinum" class="filter-ranked__ranks-rank hidden peer">
+            <label for="platinum-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">Platina</div>
+                   
+                </div>
+                <div class="w-11">
+                  <img src="../../../assets/platinumElo.png" alt="">
+                </div>
+            </label>
+          </li>
+          <li class="lg:basis-[18%] ">
+            <input type="checkbox" id="emerald-rank" name="rank" value="emerald" class="filter-ranked__ranks-rank hidden peer">
+            <label for="emerald-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">Esmeralda</div>
+                   
+                </div>
+                <div class="w-11">
+                  <img src="../../../assets/emeraldElo.png" alt="">
+                </div>
+            </label>
+          </li>
+          <li class="lg:basis-[18%] ">
+            <input type="checkbox" id="diamond-rank" name="rank" value="diamond" class="filter-ranked__ranks-rank hidden peer">
+            <label for="diamond-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">Diamante</div>
+                    
+                </div>
+                <div class="w-11">
+                  <img src="../../../assets/diamondElo.png" alt="">
+                </div>
+            </label>
+          </li>
+          <li class="lg:basis-[18%] ">
+            <input type="checkbox" id="master-rank" name="rank" value="master" class="filter-ranked__ranks-rank hidden peer">
+            <label for="master-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">Mestre</div>
+                    
+                </div>
+                <div class="w-11">
+                  <img src="../../../assets/masterElo.png" alt="">
+                </div>
+            </label>
+          </li>
+          <li class="lg:basis-[18%] ">
+            <input type="checkbox" id="grandmaster-rank" name="rank" value="grandmaster" class="filter-ranked__ranks-rank hidden peer">
+            <label for="grandmaster-rank" class="inline-flex items-center justify-between w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">Grãomestre</div>
+                    
+                </div>
+                <div class="w-11">
+                  <img src="../../../assets/grandmasterElo.png" alt="">
+                </div>
+            </label>
+          </li>
+          <li class="lg:basis-[18%] ">
+            <input type="checkbox" id="challenger-rank" name="rank" value="challenger" class="filter-ranked__ranks-rank hidden peer">
+            <label for="challenger-rank" class="inline-flex items-center justify-between  w-full p-5 text-white bg-[#1f1032] border border-transparent rounded-lg cursor-pointer hover:bg-secondary/50 duration-300 peer-checked:bg-secondary">
+                <div class="block">
+                    <div class="w-full text-lg font-semibold">Desafiante</div>
+                    
+                </div>
+                <div class="w-11">
+                  <img src="../../../assets/challengerElo.png" alt="">
+                </div>
+            </label>
+          </li>
+          </ul>
+          </div>
+        </div>
+      </section>
+      <section class="accounts w-full">
+        <div class="accounts-wrap flex flex-col w-[90%] mx-auto max-w-[1280px]">
+        <ul class="accounts-list mt-6 flex flex-col gap-5 w-full flex-wrap sm:flex-row">
+          <li class="accounts-list__account iron flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/ironElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">EUW</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Ferro IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account bronze flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/bronzeElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Bronze IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account silver flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/silverElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Prata IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account gold flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/goldElo.webp" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Ouro IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account platinum flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/platinumElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Platina IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account emerald flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/emeraldElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Esmeralda IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account diamond flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/diamondElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Diamante IV</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account master flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/masterElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Mestre</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account grandmaster flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/grandmasterElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Grãomestre</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+          <li class="accounts-list__account challenger flex flex-col gap-2 p-6 rounded-[30px] duration-500 sm:min-w-[48%] md:min-w-[31%] lg:min-w-[23%]">
+            <div class="account-header flex justify-between">
+              <div class="account-header__elo max-w-20">
+                <img src="../../../assets/challengerElo.png" alt="">
+              </div>
+              <div class="account-header__text flex flex-col justify-between">
+                <span class="account-header__text-server text-center bg-[#1a0b2c80] rounded-[20px] p-[10px] font-semibold">BR</span>
+                <span class="account-header__text-price text-center text-2xl font-bold">R$ 26.00</span>
+              </div>
+            </div>
+            <div class="account-details mb-2">
+              <h3 class="text-3xl font-bold mb-3">Desafiante</h3>
+              <div class="account-details__details flex flex-col gap-1">
+                <div class="account-details__details-champion flex justify-between">
+                  <p class="opacity-50">Campeões</p>
+                  <span>20</span>
+                </div>
+                <div class="account-details__details-skins flex justify-between">
+                  <p class="opacity-50">skins</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-rp flex justify-between">
+                  <p class="opacity-50">Riot Points</p>
+                  <span>0</span>
+                </div>
+                <div class="account-details__details-ea flex justify-between">
+                  <p class="opacity-50">Essencias Azuis</p>
+                  <span>12345</span>
+                </div>
+              </div>
+            </div>
+            <a href="#" class="w-full text-center p-4 rounded-[40px] font-semibold cursor-pointer">Ver conta</a>
+          </li>
+        </ul>
+      </div>
+      </section>
+      <div class="bg-img2 absolute left-0 bottom-0 2xl:w-[300px] xl:w-[200px] xl:block hidden">
+        <img src="../../../assets/foot-bg-1.webp" alt="">
+      </div>
+    </main>
+    <footer class="bg-secondary/10 text-white w-full">
+      <div class="mx-auto max-w-screen-xl w-[90%] space-y-8 py-16 sm:px-6 lg:space-y-16">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div class="min-w-[140px] max-w-[140px]">
+             <img src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png" alt="">
+            </div>
+    
+            <p class="mt-4 max-w-xs">
+              League of Legends é uma marca registrada da Riot Games, Inc. Não somos de forma alguma afiliados, associados ou endossados ​​pela Riot Games, Inc.
+            </p>
+    
+            <ul class="mt-8 flex gap-6">
+              <li>
+                <a
+                  href="https://discord.gg/raccoonsmurfs"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Discord</span>
+    
+                  <ion-icon name="logo-discord" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Instagram</span>
+    
+                  
+                  <ion-icon name="logo-instagram" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="https://twitter.com/RaccoonSmurfs"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Twitter</span>
+    
+                  <ion-icon name="logo-twitter" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">GitHub</span>
+    
+                  <ion-icon name="logo-github" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+            </ul>
+            <p class="mt-4 text-xs inline-block hover:text-secondary duration-300">Desenvolvido por <a href="https://github.com/lucasdaniellopes?tab=repositories" class="font-bold">Lucas Daniel Lopes Brasileiro</a></p>
+          </div>
+    
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Serviços</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    1on1 Coaching
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contas League of Legends
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contas Valorant
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="https://presenteslol.com/index.php" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Presentes LoL
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Empresa</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Sobre nós
+                  </a>
+                </li>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Precisa de ajuda?</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contatos
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#faq" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    FAQs
+                  </a>
+                </li>
+  
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Legal</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Termos e condições
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Política de Privacidade
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          &copy; 2024. Raccon Services. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
