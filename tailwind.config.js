@@ -18,6 +18,7 @@ module.exports = {
         masterShadowColor: "#9142CA",
         grandmasterShadowColor: "#7C2E35",
         challengerShadowColor: "#193E6B",
+        bgCheckout: "#140A27",
       },
       fontFamily: {
         roboto: ["Roboto", "sans-serif"],

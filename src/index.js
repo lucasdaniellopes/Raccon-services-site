@@ -2,7 +2,7 @@ function onToggleMenu(e) {
   const navbar = document.getElementById("navbar");
   const navbarUl = document.getElementById("navbar-ul");
   e.name = e.name === "menu" ? "close" : "menu";
-  navbar.classList.toggle("bottom-[-28%]");
+  navbar.classList.toggle("bottom-[-29%]");
   navbar.classList.toggle("left-[0%]");
   navbar.classList.toggle("opacity-100");
 

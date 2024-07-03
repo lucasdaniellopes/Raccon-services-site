@@ -45,9 +45,9 @@ function serverDropdown() {
     serverOptions.forEach((option) => {
       option.addEventListener("click", (event) => {
         event.preventDefault();
-        const selectedServer = option.textContent;
+        const selectedChampion = option.textContent;
         event.target.classList.toggle("bg-secondary");
-        selectTop.querySelector("span").textContent = selectedServer;
+        selectTop.querySelector("span").textContent = selectedChampion;
         selectTop.setAttribute("data-slug", option.getAttribute("data-slug"));
         selectList.classList.add("hidden");
         chevronIcon.classList.remove("rotate-180");
@@ -115,8 +115,8 @@ function championDropdown() {
     championsOptions.forEach((option) => {
       option.addEventListener("click", (event) => {
         event.preventDefault();
-        const selectedServer = option.textContent;
-        selectTop.querySelector("span").textContent = selectedServer;
+        const selectedChampion = option.textContent;
+        selectTop.querySelector("span").textContent = selectedChampion;
         selectTop.setAttribute("data-slug", option.getAttribute("data-slug"));
         event.target.classList.toggle("bg-secondary");
         selectList.classList.add("hidden");
