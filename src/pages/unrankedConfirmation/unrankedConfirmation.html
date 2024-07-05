@@ -1,0 +1,373 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="../../../assets/favicon_io (1)/favicon.ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../../dist/output.css" />
+    <link rel="stylesheet" href="../../index.css" />
+
+    <script
+      defer
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      defer
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script defer src="../../index.js"></script>
+    <title>Raccoon LoL NFA Confirmation</title>
+  </head>
+  <body class="bg-primary flex flex-col">
+    
+    <header class="md:absolute left-0 w-full z-[1000]">
+      <div
+        class="header-wrapper md:container md:w-[90%] md:mx-auto xl:max-w-[1280px] flex justify-between text-white h-[150px] min-w-[385px]"
+      >
+        <div class="header-logo min-w-[140px] max-w-[140px] ml-4 mt-4 md:max-w-[100px] md:min-w-[100px] lg:min-w-[140px] lg:max-w-[140px]">
+          <a href="../../index.html" class="w-full">
+            <img
+              src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png"
+              alt=""
+              class="w-full"
+            />
+          </a>
+        </div>
+        <nav
+          class="header-navbar  md:bottom-0 z-[5] md:bg-transparent md:justify-end h-[105vh] md:h-auto bottom-[-100%] left-[-100%]"
+          id="navbar"
+        >
+          <ul
+            class="hidden  md:flex flex-col md:flex-row md:justify-between md:items-center gap-7 text-2xl md:text-lg lg:text-2xl pl-14 font-semibold md:bg-transparent max-h-screen"
+            id="navbar-ul"
+          >
+            <li
+              class="drop relative group"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
+            >
+              <div class="drop-top flex items-center gap-3">
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:mb-0 md:font-semibold"
+                  >League of Legends</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
+              </div>
+
+              <ul
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+              >
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                >
+                  <a href="" class="">Contas Ranqueadas</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas Unranked</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
+              </ul>
+            </li>
+
+            <li
+              class="drop relative group"
+              onmouseenter="changeHeaderArrow(this)"
+              onmouseleave="changeHeaderArrow(this)"
+            >
+              <div class="drop-top flex items-center gap-3">
+                <a
+                  href="#"
+                  class="drop-top text-secondary font-bold md:text-white mb-2 md:mb-0 md:font-semibold"
+                  >Valorant</a
+                >
+                <ion-icon
+                  name="caret-down"
+                  id="drop-arrow"
+                  class="hidden md:block"
+                ></ion-icon>
+              </div>
+
+              <ul
+                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+              >
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                >
+                  <a href="" class="">Contas Ranqueadas</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas Unranked</a>
+                </li>
+                <li
+                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                >
+                  <a href="" class="">Contas NFA</a>
+                </li>
+              </ul>
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="https://presenteslol.com/index.php" class=""
+                >Presentes LoL</a
+              >
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="#faq" class="">FAQ</a>
+            </li>
+            <li class="header-navbar_opt hover:text-secondary duration-500">
+              <a href="" class="">Contatos</a>
+            </li>
+          </ul>
+        </nav>
+        <ion-icon
+          onclick="onToggleMenu(this)"
+          id="menu"
+          name="menu"
+          class="text-[40px] mt-6 md:hidden cursor-pointer mr-[4%]"
+        ></ion-icon>
+      </div>
+    </header>
+    <main class="pt-[70px] md:pt-[200px] text-white flex flex-col items-center w-full relative 2xl:pb-[400px] xl:pb-[300px] pb-12">
+      <div class="bg-img1 absolute right-0 top-[120px] 2xl:w-[350px] w-[300px] xl:w-[300px] xl:block hidden">
+        <img src="../../../assets/kennem.webp" alt="">
+      </div>
+      <span class="page-sub text-lg opacity-50 font-semibold mb-6">Conta Unraked</span>
+      <h1 class="page-title font-bold md:text-5xl text-3xl mb-14">60.000 EA - BR</h1>
+      <section class="content flex flex-col lg:flex-row-reverse items-start w-[90%] mx-auto gap-8 max-w-[1280px]">
+        <div class="content-col1 lg:w-[70%] w-full">
+          <div class="content-col1__checkout flex flex-col gap-6 w-full items-center text-lg p-8 bg-bgCheckout rounded-[40px]">
+            <span class="font-semibold">Checkout da conta</span>
+            <span class="content-col1__checkout-price text-[#F8DC65] text-3xl pb-6 font-semibold w-full text-center border-b border-[#35223699]">R$ 36.00</span>
+            <ul class="content-col1__checkout-details font-bold flex flex-col gap-4">
+              <li class="content-col1__checkout-detail flex items-center">
+                <ion-icon name="egg" class="text-[#F8DC65] pr-2"></ion-icon>
+                Garantia contra banimento
+              </li>
+              <li class="content-col1__checkout-detail flex items-center">
+                <ion-icon name="egg" class="text-[#F8DC65] pr-2"></ion-icon>
+                Entrega instantânea
+              </li>
+              <li class="content-col1__checkout-detail flex items-center">
+                <ion-icon name="egg" class="text-[#F8DC65] pr-2"></ion-icon>
+                E-mail e senha alteráveis
+              </li>
+            </ul>
+            <a href="content-col2__checkout-confirmBtn" class="bg-[#F8DC65] font-semibold w-full text-center p-4 rounded-[40px] hover:bg-[#F8DC65]/50 duration-500">Comprar</a>
+          </div>
+        </div>
+        <div class="content-col2 w-full">
+          <div class="content-col2__description flex flex-col gap-6 w-full items-center bg-bgCheckout text-lg rounded-[40px] mb-4">
+            <div class="content-col2__description-header py-8 px-6 bg-gradient-to-r from-[#3F332F] to-[#1E1F37] w-full rounded-t-[40px] text-2xl font-bold">
+              <h2>Descrição do Produto</h2>
+            </div>
+            <div class="content-col2__description-main px-6 pb-0">
+            <span class="font-normal block ">Quer começar tudo de novo? Esses são os benefícios de comprar um smurf de League of Legends com <b>60.000 Essencias Azuis.</b></span>
+            <span class="content-col1__checkout-price text-[#F8DC65] mt-4 font-bold w-full text-cente block">→ Conta super segura. Chance zero de ser banido.</span>
+            <h4 class="text-xl font-bold mt-4 mb-6">Benefícios da conta</h4>
+            <ul class="content-col1__checkout-details flex flex-col gap-4">
+              <li class="content-col1__checkout-detail flex justify-between gap-2">
+                <ion-icon name="egg" class="text-[#F8DC65] w-[5%] mt-[7px] text-xs"></ion-icon>
+                <span class="w-[95%]">Esta é uma conta nova, de nível 30+, que nunca foi usada em jogos ranqueados. Ela vem com um e-mail não verificado, o que significa que você pode usar o seu próprio.</span>
+              </li>
+              <li class="content-col1__checkout-detail flex  justify-between gap-2">
+                <ion-icon name="egg" class="text-[#F8DC65] w-[5%] mt-[7px] text-xs"></ion-icon>
+                <span class="w-[95%]">Ao comprar a conta conosco, você obtém garantia de banimento. Se algo acontecer com sua conta, você receberá uma nova gratuitamente.</span>
+              </li>
+              <li class="content-col1__checkout-detail flex justify-center gap-2">
+                <ion-icon name="egg" class="text-[#F8DC65] w-[5%] mt-[7px] text-xs"></ion-icon>
+                <span class="w-[95%]">A conta será entregue instantâneamente, 24 horas por dia, 7 dias por semana. Mas se você tiver alguma dúvida, pode entrar em contato conosco a qualquer momento.</span>
+              </li>
+            </ul>
+              <h4 class="text-xl font-bold mt-4 mb-6">Benefícios de jogabilidade</h4>
+              <p>Acesso instantâneo aos campeões: Cansado de jogar por horas para desbloquear seus campeões favoritos? Com nossas contas, você obtém acesso imediato a uma ampla lista de campeões. Chega de esperar ou gastar horas incontáveis ​​desbloqueando campeões.
+              Mergulhe no jogo e domine o Rift desde o início!</p>
+              <p class="py-6"> Por conta do Elo mais baixo você poderá aproveitar por um tempo,essa conta vai permitir que você relaxe e curta o jogo como antes, sem ter que lidar com a pressão de fazer tudo certo.</p>
+              <p class="py-6">Desbloqueie todo o potencial da sua jornada em League of Legends com nossas contas. Obtenha acesso imediato a campeões, desfrute de vantagem competitiva, explore novos estilos de jogo, economize tempo e personalize sua experiência de jogo. Eleve sua jogabilidade e abrace a emoção que espera por você em Summoner's Rift. Compre uma conta hoje e experimente o que há de melhor no jogo!</p>
+            
+            </div>
+          </div>
+      </section>
+      
+      
+      <div class="bg-img2 absolute left-0 bottom-0 2xl:w-[300px] xl:w-[200px] xl:block hidden">
+        <img src="../../../assets/foot-bg-1.webp" alt="">
+      </div>
+    </main>
+    <footer class="bg-secondary/10 text-white w-full">
+      <div class="mx-auto max-w-screen-xl w-[90%] space-y-8 py-16 sm:px-6 lg:space-y-16">
+        <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div class="min-w-[140px] max-w-[140px]">
+             <img src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png" alt="">
+            </div>
+    
+            <p class="mt-4 max-w-xs">
+              League of Legends é uma marca registrada da Riot Games, Inc. Não somos de forma alguma afiliados, associados ou endossados ​​pela Riot Games, Inc.
+            </p>
+    
+            <ul class="mt-8 flex gap-6">
+              <li>
+                <a
+                  href="https://discord.gg/raccoonsmurfs"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Discord</span>
+    
+                  <ion-icon name="logo-discord" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Instagram</span>
+    
+                  
+                  <ion-icon name="logo-instagram" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="https://twitter.com/RaccoonSmurfs"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">Twitter</span>
+    
+                  <ion-icon name="logo-twitter" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+    
+              <li>
+                <a
+                  href="#"
+                  rel="noreferrer"
+                  target="_blank"
+                  class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                >
+                  <span class="sr-only">GitHub</span>
+    
+                  <ion-icon name="logo-github" class="text-2xl"></ion-icon>
+                </a>
+              </li>
+            </ul>
+            <p class="mt-4 text-xs inline-block hover:text-secondary duration-300">Desenvolvido por <a href="https://github.com/lucasdaniellopes?tab=repositories" class="font-bold">Lucas Daniel Lopes Brasileiro</a></p>
+          </div>
+    
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Serviços</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    1on1 Coaching
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contas League of Legends
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contas Valorant
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="https://presenteslol.com/index.php" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Presentes LoL
+                  </a>
+                </li>
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Empresa</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Sobre nós
+                  </a>
+                </li>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Precisa de ajuda?</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Contatos
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#faq" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    FAQs
+                  </a>
+                </li>
+  
+              </ul>
+            </div>
+    
+            <div>
+              <p class="font-medium text-gray-900 dark:text-white">Legal</p>
+    
+              <ul class="mt-6 space-y-4 text-sm">
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Termos e condições
+                  </a>
+                </li>
+    
+                <li>
+                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                    Política de Privacidade
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    
+        <p class="text-xs text-gray-500 dark:text-gray-400">
+          &copy; 2024. Raccon Services. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
