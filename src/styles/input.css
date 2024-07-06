@@ -105,6 +105,12 @@
     @apply text-[#A6DEE6];
   }
 
+  .handlevelChampion{
+    background: radial-gradient(100% 100% at 53.13% 0%, #31e7fa 0%, #4477ff 52.6%, #db74ff 100%);
+    padding: 4px;
+    border-radius: 100%;
+  }
+
   .link {
     position: relative;
     overflow: hidden;

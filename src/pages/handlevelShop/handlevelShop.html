@@ -25,8 +25,8 @@
     ></script>
 
     <script defer src="../../index.js"></script>
-    <script src="./nfaConfirmation.js"></script>
-    <title>Raccoon LoL Handlevel Confirmation</title>
+    <script src="./handlevelShop.js"></script>
+    <title>Raccoon LoL Handlevel</title>
   </head>
   <body class="bg-primary flex flex-col">
     <header class="md:absolute left-0 w-full z-[1000]">
@@ -154,203 +154,73 @@
       <div class="bg-img1 absolute right-0 top-[120px] 2xl:w-[350px] w-[300px] xl:w-[300px] xl:block hidden  z-[-1]">
         <img src="../../../assets/kennem.webp" alt="">
       </div>
-      <section class="content flex flex-col lg:flex-row-reverse items-start w-[90%] mx-auto gap-8 max-w-[1280px]">
-        <div class="content-col1 lg:w-[70%] w-full">
-          <div class="content-col1__checkout flex flex-col gap-6 w-full items-center text-lg p-8 bg-bgCheckout/90 rounded-[40px] z-0">
-            <span class="font-semibold">Checkout da conta</span>
-            <span class="content-col1__checkout-price text-[#56e39f] text-3xl pb-6 font-semibold w-full text-center border-b border-[#35223699]">R$ 36.00</span>
-            <ul class="content-col1__checkout-details font-bold flex flex-col gap-4">
-              <li class="content-col1__checkout-detail flex items-center">
-                <ion-icon name="egg" class="text-[#56e39f] pr-2"></ion-icon>
-                Garantia contra banimento
-              </li>
-              <li class="content-col1__checkout-detail flex items-center">
-                <ion-icon name="egg" class="text-[#56e39f] pr-2"></ion-icon>
-                Entrega instantânea
-              </li>
-              <li class="content-col1__checkout-detail flex items-center">
-                <ion-icon name="egg" class="text-[#56e39f] pr-2"></ion-icon>
-                E-mail e senha alteráveis
-              </li>
-            </ul>
-            <a href="content-col2__checkout-confirmBtn" class="bg-[#56e39f] font-semibold w-full text-center p-4 rounded-[40px] hover:bg-[#56e39f]/50 duration-500">Comprar</a>
-          </div>
-        </div>
-        <div class="content-col2 w-full">
-          <div class="content-col2__description flex flex-col gap-6 w-full items-center bg-bgCheckout text-lg rounded-[40px] mb-4">
-            <div class="content-col2__description-header py-8 px-6 bg-gradient-to-r from-[#21353E] to-[#1E1F37] w-full rounded-t-[40px] text-2xl font-bold">
-              <h2>Descrição do Produto</h2>
-            </div>
-            <div class="content-col2__description-main px-6 pb-0">
-            <span class="font-normal">🔝 Conta de qualidade  🖼️ Icones: 12  🔦 Sentinelas: 2  😄 Emotes: 2  🎭 Fragmentos de skin: 0</span>
-            </div>
-            <div class="content-col2__description-info border-t border-[#35223699] w-full">
-            <ul class="content-col2__description-infos font-bold flex gap-4 p-6  flex-wrap justify-between lg:justify-normal xl:justify-between">
-              <li class="content-col2__description-info flex flex-col items-center justify-center basis-[47%] max-w-[130px]">
-                <div class="content-col2__description-info__img min-w-[56px] flex justify-center items-center">
-                  <img src="../../../assets/accounts-ico-1.svg" alt="">
-                </div>
-                <span class="opacity-50 font-normal">Campeões</span>
-                <p>20</p>
-              </li>
-              <li class="content-col2__description-info flex flex-col items-center gap-2  basis-[48%] max-w-[130px]">
-                <div class="content-col2__description-info__img min-w-[56px] flex justify-center items-center">
-                  <img src="../../../assets/accounts-ico-4.svg" alt="">
-                </div>
-                <span class="opacity-50 font-normal">Essencias Azuis</span>
-                <p>11145</p>
-              </li>
-              <li class="content-col2__description-info flex flex-col items-center gap-2  basis-[47%] max-w-[130px]">
-                <div class="content-col2__description-info__img min-w-[56px] flex justify-center items-center">
-                  <img src="../../../assets/accounts-ico-2.svg" alt="">
-                </div>
-                <span class="opacity-50 font-normal">Skins</span>
-                <p>10</p>
-              </li>
-            </ul>
-          </div>
-          </div>
-          <div class="content-col2__overview flex flex-col gap-6 w-full items-center text-lg bg-bgCheckout rounded-[40px]">
-            <div class="content-col2__overview-header py-8 px-6 bg-gradient-to-r from-[#21353E] to-[#1E1F37] w-full rounded-t-[40px] text-2xl font-bold">
-              <h2>Visão Geral</h2>
-            </div>
-            <div class="content-col2__overview-info w-full">
-              <ul class="content-col2__overview-infos font-bold flex p-6 flex-wrap justify-between">
-                <li class="content-col2__overview-info flex flex-col items-center gap-2 justify-center basis-[32%]">
-                  <div class="content-col2__overview-info__img min-w-[56px] h-[56px] flex justify-center items-center">
-                    <img src="../../../assets/accounts-ico-globe.svg" alt="">
-                  </div>
-                  <div class="content-col2__overview-info__text flex flex-col items-center">
-                    <p>EUW</p>
-                    <span class="opacity-50 font-normal">Região</span>
-                  </div>
-                  
-                </li>
-                <li class="content-col2__overview-info flex flex-col items-center justify-center gap-2 basis-[32%]">
-                  <div class="content-col2__overview-info__img min-w-[56px] h-[56px] flex justify-center items-center">
-                    <img src="../../../assets/accounts-ico-target.svg" alt="">
-                  </div>
-                  <div class="content-col2__overview-info__text flex flex-col items-center">
-                    <p>31</p>
-                    <span class="opacity-50 font-normal">Nível</span>
-                  </div>
-                  
-                </li>
-                <li class="content-col2__overview-info flex flex-col items-center gap-2 basis-[32%]">
-                  <div class="content-col2__overview-info__img w-[70px] h-[70px] flex justify-center items-center">
-                    <img src="../../../assets/ironElo.webp" alt="">
-                  </div>
-                  <div class="content-col1__overview-info__text flex flex-col items-center">
-                    <p>Ferro IV</p>
-                    <span class="opacity-50 font-normal text-center">Ranqueada Solo/Duo</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="content-col2__collection flex flex-col gap-6 w-full items-center text-lg bg-bgCheckout rounded-[40px] mt-4">
-            <div class="content-col2__collection-header py-8 px-6 bg-gradient-to-r from-[#21353E] to-[#1E1F37] w-full rounded-t-[40px] text-2xl font-bold">
+      <section class="content flex flex-col lg:flex-row-reverse items-start w-[90%] mx-auto max-w-[1280px]">
+        <div class="content w-full bg-bgCheckout/90 rounded-[40px] z-0">
+          <div class="content-description flex flex-col gap-6 w-full items-center bg-bgCheckout text-lg rounded-[40px] mb-4">      
+          <div class="content-collection flex flex-col gap-6 w-full items-center text-lg bg-bgCheckout rounded-[40px]">
+            <div class="content-collection-header py-8 px-6 bg-gradient-to-r from-[#21353E]/90 to-[#1E1F37]/90 w-full rounded-t-[40px] text-2xl font-bold">
               <h2>Coleção</h2>
             </div>
-            <div class="content-col2__collection-main w-full p-6">
-              <div class="btn-block flex flex-col sm:flex-row flex-wrap gap-3">
-                <div class="btn-block__btn1 w-full sm:w-[48%]">
-                  <input type="radio" id="champions-btn" name="collection-btns" value="champions" class="filter-ranked__ranks-rank hidden peer group" checked>
-                  <label for="champions-btn" class="inline-flex items-center w-full p-5 text-white bg-primary border border-[#56e39f] rounded-lg cursor-pointer peer-checked:bg-gradient-to-r peer-checked:from-[#21353E] peer-checked:to-[#1E1F37] duration-300" >
-                    <div class="w-11">
-                      <img src="../../../assets/accounts-ico-1.svg" alt="">
-                    </div>
-                      <div class="pl-2">
-                          <div class="w-full text-xl font-bold">Campeões</div>
-                      </div>
-                  </label>
-                </div>
-                <div class="btn-block__btn2 w-full sm:w-[48%]">
-                  <input type="radio" id="skins-btn" name="collection-btns" value="skins" class="filter-ranked__ranks-rank peer hidden group" >
-                  <label for="skins-btn" class="inline-flex items-center w-full p-5 text-white bg-primary border border-[#56e39f] rounded-lg cursor-pointer peer-checked:bg-gradient-to-r peer-checked:from-[#21353E] peer-checked:to-[#1E1F37] duration-300">
-                    <div class="w-11">
-                      <img src="../../../assets/accounts-ico-2.svg" alt="">
-                    </div>
-                      <div class="pl-2">
-                          <div class="w-full text-xl font-bold">Skins</div>
-                      </div>
-                </div>
-              </div>
+            <div class="content-collection__main w-full p-6">
               <div class="input-block my-2 w-full pt-2">
                 <input id="search-champions" type="text" name="search_servers" placeholder="Procure campeões..." class="p-4 rounded-xl bg-[#1f1032] text-white w-full outline-secondary border border-transparent focus:outline-none focus:ring-2 focus:ring-secondary">
               </div>
           </div>
-            <div class="content-col2__collection-info w-full p-6 pt-0">
-              <ul class="content-col2__collection-infos font-bold flex flex-wrap gap-2 justify-start p-6 bg-[#1f1032] rounded-xl" id="champions-options">
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+            <div class="content-collection__results w-full p-6 pt-0">
+              <ul class="content-collection__results-champs font-bold flex flex-wrap gap-5 items-center p-6 bg-[#1f1032] rounded-xl" id="champions-options">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="amumu" name="amumu">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/amumu.webp" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/amumu.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="annie" name="annie">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/annie.webp" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/annie.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="ashe" name="ashe">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/ashe.webp" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/ashe.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="brand" name="brand">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/brand-1.webp" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/brand-1.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="caitlyn" name="caitlyn">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/caitlyn.webp" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/caitlyn.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="camille" name="camille">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/camille.webp" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/camille.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="darius" name="darius">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/darius.webp" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/darius.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
-                <li class="content-col2__collection-info max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
+                <li class="content-collection__results-champs__champ max-w-[80px] w-[31%] sm:w-[25%] flex justify-center">
                   <a href="javascript:void(0);" data-slug="ekko" name="ekko">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/ekko.webp" alt="">
-                    </div>
-                  </a>
-                </li>
-              </ul>
-              <ul class="content-col2__collection-infos font-bold flex flex-wrap gap-2 justify-start p-6 bg-[#1f1032] rounded-xl" id="skins-options">
-                <li class="content-col2__collection-info max-w-[120px] w-[31%] sm:w-[25%] flex justify-center">
-                  <a href="javascript:void(0);" data-slug="jhin-project" name="jhin-project">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/jhin-project.png" alt="">
-                    </div>
-                  </a>
-                </li>
-                <li class="content-col2__collection-info max-w-[120px] w-[31%] sm:w-[25%] flex justify-center">
-                  <a href="javascript:void(0);" data-slug="zed-project-prestige" name="zed-project-prestige">
-                    <div class="content-col2__collection-info__img">
-                      <img src="../../../assets/zedpresitgio.png" alt="">
+                    <div class="content-col2__collection-info__img handlevelChampion overflow-hidden">
+                      <img src="../../../assets/ekko.webp" alt="" class="rounded-full border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>
