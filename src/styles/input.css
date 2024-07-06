@@ -3,6 +3,17 @@
 @tailwind utilities;
 
 @layer components {
+
+  ul::-webkit-scrollbar{
+    @apply w-2;
+  }
+  ul::-webkit-scrollbar-track{
+    @apply bg-primary;
+  }
+  ul::-webkit-scrollbar-thumb {
+    @apply bg-secondary rounded-xl;
+  }
+  
   .header-navbar {
     @apply absolute md:static md:flex md:items-center  md:max-w-[1280px] md:justify-center h-full opacity-0  md:opacity-100 duration-500 bg-primary w-full md:bg-transparent;
   }
