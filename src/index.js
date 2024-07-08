@@ -1,13 +1,17 @@
 function onToggleMenu(e) {
+  const btn = document.getElementById("menu");
   const navbar = document.getElementById("navbar");
   const navbarUl = document.getElementById("navbar-ul");
   e.name = e.name === "menu" ? "close" : "menu";
-  navbar.classList.toggle("bottom-[-29%]");
+  navbar.classList.toggle("top-0");
   navbar.classList.toggle("left-[0%]");
   navbar.classList.toggle("opacity-100");
 
   navbarUl.classList.toggle("hidden");
   navbarUl.classList.toggle("flex");
+
+  btn.classList.toggle("absolute");
+  btn.classList.toggle("fixed");
 }
 
 function changeHeaderArrow(e) {

@@ -3,19 +3,18 @@
 @tailwind utilities;
 
 @layer components {
-
-  ul::-webkit-scrollbar{
+  ul::-webkit-scrollbar {
     @apply w-2;
   }
-  ul::-webkit-scrollbar-track{
+  ul::-webkit-scrollbar-track {
     @apply bg-primary;
   }
   ul::-webkit-scrollbar-thumb {
     @apply bg-secondary rounded-xl;
   }
-  
+
   .header-navbar {
-    @apply absolute md:static md:flex md:items-center  md:max-w-[1280px] md:justify-center h-full opacity-0  md:opacity-100 duration-500 bg-primary w-full md:bg-transparent;
+    @apply fixed md:static md:flex md:items-center  md:max-w-[1280px] md:justify-center h-[105vh] opacity-0  md:opacity-100 duration-500 bg-primary w-full md:bg-transparent pt-10 md:pt-0;
   }
   .iron {
     @apply bg-[#6e7e8433] hover:shadow-glow hover:shadow-ironShadowColor;
@@ -116,15 +115,49 @@
     @apply text-[#A6DEE6];
   }
 
-  .handlevelChampion{
-    background: radial-gradient(100% 100% at 53.13% 0%, #31e7fa 0%, #4477ff 52.6%, #db74ff 100%);
+  .handlevelChampion {
+    background: radial-gradient(
+      100% 100% at 53.13% 0%,
+      #31e7fa 0%,
+      #4477ff 52.6%,
+      #db74ff 100%
+    );
     padding: 4px;
     border-radius: 100%;
   }
 
-  .handlevelSkin{
-    background: radial-gradient(100% 100% at 53.13% 0%, #31e7fa 0%, #4477ff 52.6%, #db74ff 100%);
+  .handlevelSkin {
+    background: radial-gradient(
+      100% 100% at 53.13% 0%,
+      #31e7fa 0%,
+      #4477ff 52.6%,
+      #db74ff 100%
+    );
     padding: 4px;
+  }
+
+  .skinText {
+    width: 80%;
+    text-align: center;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.5) 35%,
+      rgba(0, 0, 0, 0.1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  .skinTextPreco {
+    width: 80%;
+    text-align: center;
+    background: linear-gradient(
+      360deg,
+      rgba(0, 0, 0, 0.9) 0%,
+      rgba(0, 0, 0, 0.5) 35%,
+      rgba(0, 0, 0, 0.1) 90%,
+      rgba(0, 0, 0, 0) 100%
+    );
   }
 
   .link {
@@ -260,4 +293,46 @@ input[type="range"]::-moz-range-thumb {
 
 .select-list::-webkit-scrollbar-thumb:hover {
   background: #4b5563; /* cor do thumb ao passar o mouse */
+}
+
+@media only screen and (min-width: 390px) {
+  .skinText,
+  .skinTextPreco {
+    width: 83%;
+  }
+}
+
+@media only screen and (min-width: 454px) {
+  .skinText,
+  .skinTextPreco {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  .skinText,
+  .skinTextPreco {
+    width: 87%;
+  }
+}
+
+@media only screen and (min-width: 551px) {
+  .skinText,
+  .skinTextPreco {
+    width: 88%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .skinText,
+  .skinTextPreco {
+    width: 89%;
+  }
+}
+
+@media only screen and (min-width: 728px) {
+  .skinText,
+  .skinTextPreco {
+    width: 91%;
+  }
 }
