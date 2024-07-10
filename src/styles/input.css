@@ -115,6 +115,32 @@
     @apply text-[#A6DEE6];
   }
 
+  .unrankedBronze{
+    @apply hover:shadow-glow hover:shadow-bronzeShadowColor;
+    background: linear-gradient(98.65deg,#966f4b33 2.08%,#ad00ff0a 185.76%);
+  }
+  .unrankedBronze .account-main__ea {
+    color:#966f4b;
+  }
+
+  .unrankedBronze a{
+    background: -webkit-linear-gradient(351.35deg,rgba(150,111,75,.2) 2.08%,rgba(173,0,255,.04) 185.76%);
+  }
+
+  .unrankedGold{
+    @apply hover:shadow-glow hover:shadow-goldShadowColor;
+    background: linear-gradient(98.65deg,rgba(249,220,92,.2) 2.08%,rgba(173,0,255,.04) 185.76%);
+  }
+
+  .unrankedGold .account-main__ea {
+    color:#f9dc5c;
+  }
+
+  .unrankedGold a{
+    background: linear-gradient(98.65deg,rgba(249,220,92,.2) 2.08%,rgba(173,0,255,.04) 185.76%);
+  }
+
+
   .handlevelChampion {
     background: radial-gradient(
       100% 100% at 53.13% 0%,

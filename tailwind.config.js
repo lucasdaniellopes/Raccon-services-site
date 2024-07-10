@@ -26,6 +26,7 @@ module.exports = {
       boxShadow: {
         glow: ["0 0px 150px 10px"],
         bgGlow: ["0 0px 0px 10px"],
+        serverGlow:["0 1px 20px 1px #381265"]
       },
     },
   },
