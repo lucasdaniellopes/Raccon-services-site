@@ -23,6 +23,7 @@ function championSearch() {
 }
 
 function handleQueryParams() {
+  const main = document.querySelector("content");
   const list = document.getElementById("champions-options");
   const urlParams = new URLSearchParams(window.location.search);
   const champ = urlParams.get("champ");
@@ -33,20 +34,20 @@ function handleQueryParams() {
   }
 
   if (list) {
-    list.scrollIntoView({ behavior: "smooth" });
+    main.scrollIntoView({ behavior: "smooth" });
   }
 }
 
 function addChampionSkin(champ) {
   const skinHtml = `<li class="content-collection__results-champs__champ max-w-[200px] w-[31%] sm:w-[25%] flex justify-center hover:scale-105 duration-300">
-                  <a href="javascript:void(0)" data-slug="jhin-project" name="jhin-project">
+                  <a href="../handlevelConfirmation/handlevelConfirmation.html" data-slug="jhin-project" name="jhin-project">
                     <div class="content-col2__collection-info__img handlevelSkin overflow-hidden">
                       <img src="../../../assets/jhin-project.png" alt="" class="border-4 border-[#1f1032]">
                     </div>
                   </a>
                 </li>`;
   const skinHtml2 = `<li class="content-collection__results-champs__champ relative max-w-[200px] w-[31%] sm:w-[25%] flex justify-center hover:scale-105 duration-300">
-                  <a href="javascript:void(0)" data-slug="jhin-project2" name="jhin-project2">
+                  <a href="../handlevelConfirmation/handlevelConfirmation.html" data-slug="jhin-project2" name="jhin-project2">
                     <div class="content-col2__collection-info__img  handlevelSkin overflow-hidden">
                       <img src="../../../assets/jhin-project.png" alt="" class="border-4 border-[#1f1032]">
                     </div>

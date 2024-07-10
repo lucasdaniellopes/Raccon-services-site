@@ -195,7 +195,7 @@
   }
 
   .unrankedDiamond {
-    @apply hover:shadow-glow hover:shadow-masterShadowColor;
+    @apply hover:shadow-glow hover:shadow-diamondShadowColor;
     background: linear-gradient(
       98.38deg,
       rgba(0, 133, 255, 0.2) 2.14%,
@@ -208,6 +208,14 @@
   }
 
   .unrankedDiamond a {
+    background: linear-gradient(
+      98.38deg,
+      rgba(0, 133, 255, 0.2) 2.14%,
+      rgba(173, 0, 255, 0.04) 96.06%
+    );
+  }
+
+  .gradientConfirmation {
     background: linear-gradient(
       98.38deg,
       rgba(0, 133, 255, 0.2) 2.14%,
