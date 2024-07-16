@@ -12,6 +12,8 @@ function onToggleMenu(e) {
 
   btn.classList.toggle("absolute");
   btn.classList.toggle("fixed");
+
+  document.querySelector("body").classList.toggle("overflow-hidden");
 }
 
 function changeHeaderArrow(e) {
