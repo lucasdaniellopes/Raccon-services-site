@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
@@ -28,12 +28,15 @@
     <script defer src="./index.js"></script>
     <title>Raccoon Services</title>
   </head>
-  <body class="bg-primary flex flex-col">
-    <header class="md:absolute left-0 w-full z-[1000]">
+
+  <body class="flex flex-col bg-primary">
+    <header class="left-0 z-[1000] w-full md:absolute">
       <div
-        class="header-wrapper md:container md:w-[90%] md:mx-auto xl:max-w-[1280px] flex justify-between text-white h-[150px] min-w-[385px]"
+        class="header-wrapper flex h-[150px] min-w-[385px] justify-between text-white md:container md:mx-auto md:w-[90%] xl:max-w-[1280px]"
       >
-        <div class="header-logo min-w-[140px] max-w-[140px] ml-4 mt-4 md:max-w-[100px] md:min-w-[100px] lg:min-w-[140px] lg:max-w-[140px]">
+        <div
+          class="header-logo ml-4 mt-4 min-w-[140px] max-w-[140px] md:min-w-[100px] md:max-w-[100px] lg:min-w-[140px] lg:max-w-[140px]"
+        >
           <a href="../../index.html" class="w-full">
             <img
               src="../../../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png"
@@ -43,22 +46,22 @@
           </a>
         </div>
         <nav
-          class="header-navbar  md:bottom-0 z-[5] md:bg-transparent md:justify-end h-[105vh] md:h-auto bottom-[-100%] left-[-100%]"
+          class="header-navbar bottom-[-100%] left-[-100%] z-[5] h-[105vh] md:bottom-0 md:h-auto md:justify-end md:bg-transparent"
           id="navbar"
         >
           <ul
-            class="hidden  md:flex flex-col md:flex-row md:justify-between md:items-center gap-7 text-2xl md:text-lg lg:text-2xl pl-14 font-semibold md:bg-transparent max-h-screen"
+            class="hidden max-h-screen flex-col gap-7 pl-14 text-2xl font-semibold md:flex md:flex-row md:items-center md:justify-between md:bg-transparent md:text-lg lg:text-2xl"
             id="navbar-ul"
           >
             <li
-              class="drop relative group"
+              class="drop group relative"
               onmouseenter="changeHeaderArrow(this)"
               onmouseleave="changeHeaderArrow(this)"
             >
               <div class="drop-top flex items-center gap-3">
                 <a
                   href="#"
-                  class="drop-top text-secondary font-bold md:text-white mb-2 md:mb-0 md:font-semibold"
+                  class="drop-top mb-2 font-bold text-secondary md:mb-0 md:font-semibold md:text-white"
                   >League of Legends</a
                 >
                 <ion-icon
@@ -69,20 +72,24 @@
               </div>
 
               <ul
-                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+                class="drop-list rounded-3xl md:invisible md:absolute md:min-w-[250px] md:bg-primary md:opacity-0 md:shadow-md md:shadow-white md:duration-500 md:group-hover:visible md:group-hover:opacity-100"
               >
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                  class="header-navbar_opt duration-500 hover:text-secondary md:p-3"
                 >
-                  <a href="./pages/handlevelShop/handlevelShop.html" class="">Handlevel</a>
+                  <a href="./pages/handlevelShop/handlevelShop.html" class=""
+                    >Handlevel</a
+                  >
                 </li>
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                  class="header-navbar_opt mt-10 duration-500 hover:text-secondary md:mt-0 md:p-3"
                 >
-                  <a href="./pages/choseUnranked/choseUnranked.html" class="">Contas Unranked</a>
+                  <a href="./pages/choseUnranked/choseUnranked.html" class=""
+                    >Contas Unranked</a
+                  >
                 </li>
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                  class="header-navbar_opt mt-10 duration-500 hover:text-secondary md:mt-0 md:p-3"
                 >
                   <a href="./pages/nfaShop/nfaShop.html" class="">Contas NFA</a>
                 </li>
@@ -90,14 +97,14 @@
             </li>
 
             <li
-              class="drop relative group"
+              class="drop group relative"
               onmouseenter="changeHeaderArrow(this)"
               onmouseleave="changeHeaderArrow(this)"
             >
               <div class="drop-top flex items-center gap-3">
                 <a
                   href="#"
-                  class="drop-top text-secondary font-bold md:text-white mb-2 md:mb-0 md:font-semibold"
+                  class="drop-top mb-2 font-bold text-secondary md:mb-0 md:font-semibold md:text-white"
                   >Valorant</a
                 >
                 <ion-icon
@@ -108,34 +115,34 @@
               </div>
 
               <ul
-                class="drop-list md:absolute md:bg-primary rounded-3xl md:min-w-[250px] md:shadow-white md:shadow-md md:opacity-0 md:group-hover:visible md:group-hover:opacity-100 md:duration-500 md:invisible"
+                class="drop-list rounded-3xl md:invisible md:absolute md:min-w-[250px] md:bg-primary md:opacity-0 md:shadow-md md:shadow-white md:duration-500 md:group-hover:visible md:group-hover:opacity-100"
               >
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500"
+                  class="header-navbar_opt duration-500 hover:text-secondary md:p-3"
                 >
                   <a href="" class="">Contas Ranqueadas</a>
                 </li>
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                  class="header-navbar_opt mt-10 duration-500 hover:text-secondary md:mt-0 md:p-3"
                 >
                   <a href="" class="">Contas Unranked</a>
                 </li>
                 <li
-                  class="header-navbar_opt md:p-3 hover:text-secondary duration-500 mt-10 md:mt-0"
+                  class="header-navbar_opt mt-10 duration-500 hover:text-secondary md:mt-0 md:p-3"
                 >
                   <a href="" class="">Contas NFA</a>
                 </li>
               </ul>
             </li>
-            <li class="header-navbar_opt hover:text-secondary duration-500">
+            <li class="header-navbar_opt duration-500 hover:text-secondary">
               <a href="https://presenteslol.com/index.php" class=""
                 >Presentes LoL</a
               >
             </li>
-            <li class="header-navbar_opt hover:text-secondary duration-500">
+            <li class="header-navbar_opt duration-500 hover:text-secondary">
               <a href="#faq" class="">FAQ</a>
             </li>
-            <li class="header-navbar_opt hover:text-secondary duration-500">
+            <li class="header-navbar_opt duration-500 hover:text-secondary">
               <a href="" class="">Contatos</a>
             </li>
           </ul>
@@ -144,231 +151,391 @@
           onclick="onToggleMenu(this)"
           id="menu"
           name="menu"
-          class="text-[40px] mt-6 md:hidden cursor-pointer mr-[4%] z-50 absolute right-0"
+          class="absolute right-0 z-50 mr-[4%] mt-6 cursor-pointer text-[40px] md:hidden"
         ></ion-icon>
       </div>
     </header>
-    <section class="main text-white relative pt-150px">
+    <section class="main pt-150px relative text-white">
       <div
-        class="main-bg__mob block bottom-[-400px] md:bottom-[-250px] lg:bottom-[-60px] lg:right-[55px] lg:left-auto left-0 pointer-events-none absolute overflow-hidden max-w-[360px] min-w-[360px] md:left-auto md:right-0 md:scale-x-[-1] lg:scale-y-[1.3] lg:scale-x-[-1.3] z-[0] max-h-[350px]"
+        class="main-bg__mob pointer-events-none absolute bottom-[-400px] left-0 z-[0] block max-h-[350px] min-w-[360px] max-w-[360px] overflow-hidden md:bottom-[-250px] md:left-auto md:right-0 md:scale-x-[-1] lg:bottom-[-60px] lg:left-auto lg:right-[55px] lg:scale-x-[-1.3] lg:scale-y-[1.3]"
       >
-        <img src="../assets/main-mob.webp" class="overflow-hidden object-fill" alt="" />
+        <img
+          src="../assets/main-mob.webp"
+          class="overflow-hidden object-fill"
+          alt=""
+        />
       </div>
       <div
-        class="main-wrapper md:min-w-[auto] xl:min-h-[600px] 2xl:min-h-[800px] max-w-[1280px] mx-auto w-[90%] h-full pt-[100px] md:pt-[250px]"
+        class="main-wrapper mx-auto h-full w-[90%] max-w-[1280px] pt-[100px] md:min-w-[auto] md:pt-[250px] xl:min-h-[600px] 2xl:min-h-[800px]"
       >
         <div
-          class="main-wrapper-info h-full flex flex-col gap-3 min-w-[360px] w-full"
+          class="main-wrapper-info flex h-full w-full min-w-[360px] flex-col gap-3"
         >
           <span
-            class="main-wrapper-info__subtitle text-lg leading-6 font-semibold mb-4 md:text-2xl"
+            class="main-wrapper-info__subtitle mb-4 text-lg font-semibold leading-6 md:text-2xl"
             >Compre sua smurf agora!</span
           >
 
           <h1
-            class="main-wrapper-info__title text-[40px] leading[54px] font-extrabold max-w-[800px] md:text-6xl z-10"
+            class="main-wrapper-info__title leading[54px] z-10 max-w-[800px] text-[40px] font-extrabold md:text-6xl"
           >
             <span
-              class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] text-transparent bg-clip-text"
+              class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] bg-clip-text text-transparent"
               >Fonte confiável</span
             >
             para comprar sua conta smurf
           </h1>
-          <div class="main-wrapper-info__tb mt-9 font-semibold md:text-xl lg:text-2xl" >
+          <div
+            class="main-wrapper-info__tb mt-9 font-semibold md:text-xl lg:text-2xl"
+          >
             <ul class="flex">
               <li>
                 <a
                   href=""
-                  class="link p-4 min-w[160px] bg-secondary rounded-l-3xl border border-[#7103ab] border-r-0 duration-500"
+                  class="link min-w[160px] rounded-l-3xl border border-r-0 border-[#7103ab] bg-secondary p-4 duration-500"
                 >
-                  <span class="z-[2] relative">Conta Unranked</span>
+                  <span class="relative z-[2]">Conta Unranked</span>
                 </a>
               </li>
 
               <li>
                 <a
                   href=""
-                  class="link p-4 min-w[160px] bg-[#250741] border-[#ad00ff] rounded-r-3xl border border-l-0 duration-500"
+                  class="link min-w[160px] rounded-r-3xl border border-l-0 border-[#ad00ff] bg-[#250741] p-4 duration-500"
                 >
-                  <span class="z-[2] relative">Conta Ranqueada</span>
+                  <span class="relative z-[2]">Conta Ranqueada</span>
                 </a>
               </li>
             </ul>
           </div>
         </div>
       </div>
-        <div
-          class="video-bg mainVideo aspect-video max-w-full hidden md:block object-cover  bg-cover absolute top-0 left-0 right-0 opacity-[0.3] overflow-hidden max-h-[700px] h-full w-full bg-no-repeat z-[-10]"
-        >
-          <video
-            muted
-            loop
-            autoplay
-            src="../assets/soraka-florescer-video.mp4"
-            class="align-middle object-top"
-          ></video>
-        </div>
+      <div
+        class="video-bg mainVideo absolute left-0 right-0 top-0 z-[-10] hidden aspect-video h-full max-h-[700px] w-full max-w-full overflow-hidden bg-cover bg-no-repeat object-cover opacity-[0.3] md:block"
+      >
+        <video
+          muted
+          loop
+          autoplay
+          src="../assets/soraka-florescer-video.mp4"
+          class="object-top align-middle"
+        ></video>
       </div>
     </section>
-    <section class="about mt-[400px] md:mt-[200px] z-[1005] lg:mt-[100px] mb-10 light-effect h-full min-h-[800px]">
-      <div class="about-wrapper text-white w-[90%] mx-auto max-w-[1280px]">
-        <h2 class="about-title text-5xl font-bold mb-10">
-          Nós somos o <span class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] text-transparent bg-clip-text">Melhor Lugar</span> para comprar sua conta.
+    <section
+      class="about light-effect z-[1005] mb-10 mt-[400px] h-full min-h-[800px] md:mt-[200px] lg:mt-[100px]"
+    >
+      <div class="about-wrapper mx-auto w-[90%] max-w-[1280px] text-white">
+        <h2 class="about-title mb-10 text-5xl font-bold">
+          Nós somos o
+          <span
+            class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] bg-clip-text text-transparent"
+            >Melhor Lugar</span
+          >
+          para comprar sua conta.
         </h2>
         <div class="about-wrapper-info flex flex-col gap-6 lg:flex-row">
-          <div class="about-wrapper-info__highlights w-full lg:flex lg:flex-col lg:w-1/2 gap-5">
-            <ul class="flex flex-wrap mt-6">
-              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
-                <ion-icon name="rocket-sharp" class="text-6xl text-secondary"></ion-icon>
+          <div
+            class="about-wrapper-info__highlights w-full gap-5 lg:flex lg:w-1/2 lg:flex-col"
+          >
+            <ul class="mt-6 flex flex-wrap">
+              <li
+                class="flex w-1/2 flex-col items-center justify-center gap-2 p-4 text-center"
+              >
+                <ion-icon
+                  name="rocket-sharp"
+                  class="text-6xl text-secondary"
+                ></ion-icon>
                 <span class="font-extrabold">Entrega imediata 24/7</span>
-                <p>Quando você compra uma smurf conosco, ela será entregue instantaneamente por e-mail</p>
+                <p>
+                  Quando você compra uma smurf conosco, ela será entregue
+                  instantaneamente por e-mail
+                </p>
               </li>
-              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
-                <ion-icon name="call-outline"  class="text-6xl text-secondary"></ion-icon>
+              <li
+                class="flex w-1/2 flex-col items-center justify-center gap-2 p-4 text-center"
+              >
+                <ion-icon
+                  name="call-outline"
+                  class="text-6xl text-secondary"
+                ></ion-icon>
                 <span class="font-extrabold">Suporte Premium</span>
-                <p>A central da Raccon Services inclui suporte 24 horas por dia, 7 dias por semana</p>
+                <p>
+                  A central da Raccon Services inclui suporte 24 horas por dia,
+                  7 dias por semana
+                </p>
               </li>
-              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
-                <ion-icon name="shield-half-sharp"  class="text-6xl text-secondary"></ion-icon>
+              <li
+                class="flex w-1/2 flex-col items-center justify-center gap-2 p-4 text-center"
+              >
+                <ion-icon
+                  name="shield-half-sharp"
+                  class="text-6xl text-secondary"
+                ></ion-icon>
                 <span class="font-extrabold">Garantia contra ban</span>
                 <p>Oferecemos garantia vitalícia e excelente suporte</p>
               </li>
-              <li class="flex flex-col gap-2 justify-center items-center w-1/2 p-4 text-center">
-                <ion-icon name="document-lock-outline"  class="text-6xl text-secondary"></ion-icon>
+              <li
+                class="flex w-1/2 flex-col items-center justify-center gap-2 p-4 text-center"
+              >
+                <ion-icon
+                  name="document-lock-outline"
+                  class="text-6xl text-secondary"
+                ></ion-icon>
                 <span class="font-extrabold">Pagamento seguro</span>
-                <p>Nosso site é protegido pela tecnologia SSL e os métodos de pagamento são seguros</p>
+                <p>
+                  Nosso site é protegido pela tecnologia SSL e os métodos de
+                  pagamento são seguros
+                </p>
               </li>
             </ul>
-            <a href="" class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] w-full flex items-center justify-center text-center py-2 px-12 rounded-[40px] min-h-[55px]">VEJA OS PREÇOS</a>
+            <a
+              href=""
+              class="flex min-h-[55px] w-full items-center justify-center rounded-[40px] bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] px-12 py-2 text-center"
+              >VEJA OS PREÇOS</a
+            >
           </div>
-        
-          <div class="about-wrapper-info__blocks flex flex-col justify-between lg:w-1/2">
-            <div class="about-wrapper-info__block p-10 bg-gradient-to-r from-[#230941] to-[#15082B] mb-5 mt-4 rounded-3xl">
+
+          <div
+            class="about-wrapper-info__blocks flex flex-col justify-between lg:w-1/2"
+          >
+            <div
+              class="about-wrapper-info__block mb-5 mt-4 rounded-3xl bg-gradient-to-r from-[#230941] to-[#15082B] p-10"
+            >
               <div class="mb-3">
                 <ion-icon name="prism-sharp" class="text-secondary"></ion-icon>
-                <span class="text-[17px] pl-7 font-extrabold">Por que você precisa comprar uma conta?</span>
+                <span class="pl-7 text-[17px] font-extrabold"
+                  >Por que você precisa comprar uma conta?</span
+                >
               </div>
-        
-              <p>Você não precisa perder tempo subindo uma conta até o nível 30. Você só precisa de alguns minutos para se preparar para partidas ranqueadas. Outra grande vantagem de comprar uma conta é o fato de tornar o jogo mil vezes mais interessante. Todos sabemos que chegar ao topo leva muito tempo</p>
+
+              <p>
+                Você não precisa perder tempo subindo uma conta até o nível 30.
+                Você só precisa de alguns minutos para se preparar para partidas
+                ranqueadas. Outra grande vantagem de comprar uma conta é o fato
+                de tornar o jogo mil vezes mais interessante. Todos sabemos que
+                chegar ao topo leva muito tempo
+              </p>
             </div>
-            <div class="about-wrapper-info__block p-10 bg-gradient-to-r from-[#230941] to-[#15082B] rounded-3xl">
+            <div
+              class="about-wrapper-info__block rounded-3xl bg-gradient-to-r from-[#230941] to-[#15082B] p-10"
+            >
               <div class="mb-3">
                 <ion-icon name="prism-sharp" class="text-secondary"></ion-icon>
-                <span class="text-[17px] pl-7 font-extrabold">Pratique, ganhe experiência</span>
+                <span class="pl-7 text-[17px] font-extrabold"
+                  >Pratique, ganhe experiência</span
+                >
               </div>
-              <p>Usar smurfs não tem nada a ver com trapaça. Na verdade, são uma espécie de sala de treino, onde o jogador aprimora as suas habilidades e avalia a eficácia de novas estratégias. Comprar um smurf hoje é muito simples – bastam alguns cliques</p>
+              <p>
+                Usar smurfs não tem nada a ver com trapaça. Na verdade, são uma
+                espécie de sala de treino, onde o jogador aprimora as suas
+                habilidades e avalia a eficácia de novas estratégias. Comprar um
+                smurf hoje é muito simples – bastam alguns cliques
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
-    <section class="presentes text-white font-bold bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] w-full min-w-fit py-[30px]">
-      <div class="presentes-wrapper w-[90%] mx-auto flex flex-col items-center gap-[40px] md:flex-row-reverse max-w-[1280px]">
-        <div class="presentes-wrapper__info flex flex-col justify-between items-center gap-7 max-w-[320px] md:max-w-full md:flex-row-reverse md:justify-center">
-          <div class="max-w[430px] md:w-[50%] flex flex-col justify-center items-center">
-          <h3 class="text-5xl leading-[80px] text-center mb-14 pt-4">Quer comprar skins mais barato? e que tal o passe?</h3>
-          <a href="https://presenteslol.com" target="_blank" class="bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] w-full flex items-center justify-center text-center py-2 px-12 rounded-[40px] min-h-[55px] text-xl">Clique Aqui</a>
-        </div>
-          <div class="presentes-wrapper__img max-w-[500px] md:w-[50%] h-full overflow-hidden max-h-[500px] object-center self-end">
-            <img src="../assets/appeal-mob.webp" class=" object-center" alt="">
+    <section
+      class="presentes w-full min-w-fit bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] py-[30px] font-bold text-white"
+    >
+      <div
+        class="presentes-wrapper mx-auto flex w-[90%] max-w-[1280px] flex-col items-center gap-[40px] md:flex-row-reverse"
+      >
+        <div
+          class="presentes-wrapper__info flex max-w-[320px] flex-col items-center justify-between gap-7 md:max-w-full md:flex-row-reverse md:justify-center"
+        >
+          <div
+            class="max-w[430px] flex flex-col items-center justify-center md:w-[50%]"
+          >
+            <h3 class="mb-14 pt-4 text-center text-5xl leading-[80px]">
+              Quer comprar skins mais barato? e que tal o passe?
+            </h3>
+            <a
+              href="https://presenteslol.com"
+              target="_blank"
+              class="flex min-h-[55px] w-full items-center justify-center rounded-[40px] bg-[radial-gradient(22.15%_456.25%_at_94.74%_352.08%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_radial-gradient(30.19%_621.88%_at_26.59%_-352.6%,_#0085ff_0,_rgba(90,_51,_218,_0)_100%),_linear-gradient(90deg,_#750aa7_29.9%,_#ad00ff_88.98%)] px-12 py-2 text-center text-xl"
+              >Clique Aqui</a
+            >
+          </div>
+          <div
+            class="presentes-wrapper__img h-full max-h-[500px] max-w-[500px] self-end overflow-hidden object-center md:w-[50%]"
+          >
+            <img src="../assets/appeal-mob.webp" class="object-center" alt="" />
           </div>
         </div>
       </div>
     </section>
-    <section class="faq text-white mt-11" id="faq">
-      <div class="faq-wrapper w-[90%] mx-auto max-w-screen-xl">
-        <h2 class="text-6xl leading-[80px] text-center mb-14 pt-4 text-white font-bold">Perguntas Frequentes</h2>
-        <div class="faq-wrapper__questions flex flex-col md:flex-row w-full md:gap-4 items-center">
+    <section class="faq mt-11 text-white" id="faq">
+      <div class="faq-wrapper mx-auto w-[90%] max-w-screen-xl">
+        <h2
+          class="mb-14 pt-4 text-center text-6xl font-bold leading-[80px] text-white"
+        >
+          Perguntas Frequentes
+        </h2>
+        <div
+          class="faq-wrapper__questions flex w-full flex-col items-center md:flex-row md:gap-4"
+        >
           <div class="faq-wrapper__questions-col1 w-full md:w-1/2">
-            
-            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[100px] hover:bg-secondary duration-500 cursor-pointer flex flex-col justify-between" onclick="toggleAnswer(1), changeFaqArrow(this)">
-              <div class="flex items-center justify-between" >
-                <h2 class="text-xl font-semibold">Posso alterar a senha e o e-mail da conta?</h2>
-                <button class=" focus:outline-none">
-                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+            <div
+              class="faq-wrapper__question mb-4 flex min-h-[100px] cursor-pointer flex-col justify-between rounded-lg bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] p-6 shadow-lg duration-500 hover:bg-secondary"
+              onclick="toggleAnswer(1), changeFaqArrow(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h2 class="text-xl font-semibold">
+                  Posso alterar a senha e o e-mail da conta?
+                </h2>
+                <button class="focus:outline-none">
+                  <ion-icon
+                    name="chevron-down-outline"
+                    class="text-2xl"
+                  ></ion-icon>
                 </button>
               </div>
               <div class="mt-4 hidden" id="answer-1">
-                Sim! Todas as nossas contas LoL vêm com detalhes de login para que você possa fazer login na sua conta através do site de League of Legends e alterar o que quiser.
+                Sim! Todas as nossas contas LoL vêm com detalhes de login para
+                que você possa fazer login na sua conta através do site de
+                League of Legends e alterar o que quiser.
               </div>
             </div>
-            
-            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[100px] hover:bg-secondary  duration-500 cursor-pointer flex flex-col justify-between"  onclick="toggleAnswer(2), changeFaqArrow(this)">
-              <div class="flex items-center justify-between ">
-                <h2 class="text-xl font-semibold">Como alterar seu e-mail e senha</h2>
-                <button class=" focus:outline-none">
-                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+
+            <div
+              class="faq-wrapper__question mb-4 flex min-h-[100px] cursor-pointer flex-col justify-between rounded-lg bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] p-6 shadow-lg duration-500 hover:bg-secondary"
+              onclick="toggleAnswer(2), changeFaqArrow(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h2 class="text-xl font-semibold">
+                  Como alterar seu e-mail e senha
+                </h2>
+                <button class="focus:outline-none">
+                  <ion-icon
+                    name="chevron-down-outline"
+                    class="text-2xl"
+                  ></ion-icon>
                 </button>
               </div>
-              <div class="mt-4  hidden" id="answer-2">
-                Para alterar seu e-mail e senha acesse leagueoflegends.com e faça login na conta. Vá para configurações (canto superior direito) e clique no lápis, no lado direito do e-mail atual. Digite seu novo e-mail e verifique-o com o e-mail que a riot lhe enviou. Escolha uma senha forte depois.
+              <div class="mt-4 hidden" id="answer-2">
+                Para alterar seu e-mail e senha acesse leagueoflegends.com e
+                faça login na conta. Vá para configurações (canto superior
+                direito) e clique no lápis, no lado direito do e-mail atual.
+                Digite seu novo e-mail e verifique-o com o e-mail que a riot lhe
+                enviou. Escolha uma senha forte depois.
               </div>
             </div>
-            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[100px] hover:bg-secondary  duration-500 cursor-pointer flex flex-col justify-between " onclick="toggleAnswer(3), changeFaqArrow(this)">
-              <div class="flex items-center justify-between " >
-                <h2 class="text-xl font-semibold h-full z-[10]">Depois de quanto tempo posso acessar minha conta?</h2>
-                <button class=" focus:outline-none">
-                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+            <div
+              class="faq-wrapper__question mb-4 flex min-h-[100px] cursor-pointer flex-col justify-between rounded-lg bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] p-6 shadow-lg duration-500 hover:bg-secondary"
+              onclick="toggleAnswer(3), changeFaqArrow(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h2 class="z-[10] h-full text-xl font-semibold">
+                  Depois de quanto tempo posso acessar minha conta?
+                </h2>
+                <button class="focus:outline-none">
+                  <ion-icon
+                    name="chevron-down-outline"
+                    class="text-2xl"
+                  ></ion-icon>
                 </button>
               </div>
               <div class="mt-4 hidden" id="answer-3">
-                Depois de pagar pela sua conta, os detalhes da conta serão enviados instantaneamente para o endereço de e-mail que você usou para finalizar a compra. Certifique-se de verificar sua pasta de spam/lixo eletrônico, pois ela também pode acabar lá!
+                Depois de pagar pela sua conta, os detalhes da conta serão
+                enviados instantaneamente para o endereço de e-mail que você
+                usou para finalizar a compra. Certifique-se de verificar sua
+                pasta de spam/lixo eletrônico, pois ela também pode acabar lá!
               </div>
             </div>
           </div>
-          
+
           <div class="faq-wrapper__questions-col2 w-full md:w-1/2">
-            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[100px]  hover:bg-secondary  duration-500 cursor-pointer flex flex-col justify-between " onclick="toggleAnswer(4), changeFaqArrow(this)">
-              <div class="flex items-center justify-between" >
-                <h2 class="text-xl font-semibold">Qual é o tempo de garantia contra ban?</h2>
-                <button class=" focus:outline-none">
-                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+            <div
+              class="faq-wrapper__question mb-4 flex min-h-[100px] cursor-pointer flex-col justify-between rounded-lg bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] p-6 shadow-lg duration-500 hover:bg-secondary"
+              onclick="toggleAnswer(4), changeFaqArrow(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h2 class="text-xl font-semibold">
+                  Qual é o tempo de garantia contra ban?
+                </h2>
+                <button class="focus:outline-none">
+                  <ion-icon
+                    name="chevron-down-outline"
+                    class="text-2xl"
+                  ></ion-icon>
                 </button>
               </div>
               <div class="mt-4 hidden" id="answer-4">
-                Se sua conta for banida por qualquer falha ou defeito nosso, forneceremos a você uma nova conta substituta gratuitamente.
+                Se sua conta for banida por qualquer falha ou defeito nosso,
+                forneceremos a você uma nova conta substituta gratuitamente.
               </div>
             </div>
-            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[100px] hover:bg-secondary  duration-500 cursor-pointer flex flex-col justify-between " onclick="toggleAnswer(5), changeFaqArrow(this)">
-              <div class="flex items-center justify-between " >
-                <h2 class="text-xl font-semibold">Posso começar a jogar partidas ranqueadas imediatamente?</h2>
-                <button class=" focus:outline-none">
-                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+            <div
+              class="faq-wrapper__question mb-4 flex min-h-[100px] cursor-pointer flex-col justify-between rounded-lg bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] p-6 shadow-lg duration-500 hover:bg-secondary"
+              onclick="toggleAnswer(5), changeFaqArrow(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h2 class="text-xl font-semibold">
+                  Posso começar a jogar partidas ranqueadas imediatamente?
+                </h2>
+                <button class="focus:outline-none">
+                  <ion-icon
+                    name="chevron-down-outline"
+                    class="text-2xl"
+                  ></ion-icon>
                 </button>
               </div>
               <div class="mt-4 hidden" id="answer-5">
-                Você precisa de pelo menos 20 campeões para jogar partidas ranqueadas. Compre alguns campeões usando a essência azul da sua conta e comece a jogar!
+                Você precisa de pelo menos 20 campeões para jogar partidas
+                ranqueadas. Compre alguns campeões usando a essência azul da sua
+                conta e comece a jogar!
               </div>
             </div>
-            <div class="faq-wrapper__question bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] rounded-lg shadow-lg p-6 mb-4 min-h-[100px] hover:bg-secondary  duration-500 cursor-pointer flex flex-col justify-between" onclick="toggleAnswer(6), changeFaqArrow(this)">
-              <div class="flex items-center justify-between " >
-                <h2 class="text-xl font-semibold">De quanta essência azul eu preciso para jogar partidas ranqueadas?</h2>
+            <div
+              class="faq-wrapper__question mb-4 flex min-h-[100px] cursor-pointer flex-col justify-between rounded-lg bg-gradient-to-r from-[#7713c533] to-[#ad00ff0a] p-6 shadow-lg duration-500 hover:bg-secondary"
+              onclick="toggleAnswer(6), changeFaqArrow(this)"
+            >
+              <div class="flex items-center justify-between">
+                <h2 class="text-xl font-semibold">
+                  De quanta essência azul eu preciso para jogar partidas
+                  ranqueadas?
+                </h2>
                 <button class="focus:outline-none">
-                  <ion-icon name="chevron-down-outline" class="text-2xl"></ion-icon>
+                  <ion-icon
+                    name="chevron-down-outline"
+                    class="text-2xl"
+                  ></ion-icon>
                 </button>
               </div>
               <div class="mt-4 hidden" id="answer-6">
-                Você precisa de pelo menos 20 campeões para jogar partidas ranqueadas. Compre alguns campeões usando as essências azuis da sua conta e comece a jogar! São necessários 20 campeões: 13 x 450 EA = 5.850, 7 X 1.350 EA = 9.450 EA total necessário = 15.390 EA.
+                Você precisa de pelo menos 20 campeões para jogar partidas
+                ranqueadas. Compre alguns campeões usando as essências azuis da
+                sua conta e comece a jogar! São necessários 20 campeões: 13 x
+                450 EA = 5.850, 7 X 1.350 EA = 9.450 EA total necessário =
+                15.390 EA.
               </div>
             </div>
           </div>
-          
         </div>
-        
       </div>
     </section>
-    <footer class="bg-secondary/10 text-white mt-10 w-full">
-      <div class="mx-auto max-w-screen-xl w-[90%] space-y-8 py-16 sm:px-6 lg:space-y-16">
+    <footer class="mt-10 w-full bg-secondary/10 text-white">
+      <div
+        class="mx-auto w-[90%] max-w-screen-xl space-y-8 py-16 sm:px-6 lg:space-y-16"
+      >
         <div class="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div class="min-w-[140px] max-w-[140px]">
-             <img src="../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png" alt="">
+              <img
+                src="../assets/Logo/panel-560352490-image-d0e2b39c-7970-4603-8f63-c0fab872558e.png"
+                alt=""
+              />
             </div>
-    
+
             <p class="mt-4 max-w-xs">
-              League of Legends é uma marca registrada da Riot Games, Inc. Não somos de forma alguma afiliados, associados ou endossados ​​pela Riot Games, Inc.
+              League of Legends é uma marca registrada da Riot Games, Inc. Não
+              somos de forma alguma afiliados, associados ou endossados ​​pela
+              Riot Games, Inc.
             </p>
-    
+
             <ul class="mt-8 flex gap-6">
               <li>
                 <a
@@ -378,11 +545,11 @@
                   class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                 >
                   <span class="sr-only">Discord</span>
-    
+
                   <ion-icon name="logo-discord" class="text-2xl"></ion-icon>
                 </a>
               </li>
-    
+
               <li>
                 <a
                   href="#"
@@ -391,12 +558,11 @@
                   class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                 >
                   <span class="sr-only">Instagram</span>
-    
-                  
+
                   <ion-icon name="logo-instagram" class="text-2xl"></ion-icon>
                 </a>
               </li>
-    
+
               <li>
                 <a
                   href="https://twitter.com/RaccoonSmurfs"
@@ -405,11 +571,11 @@
                   class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                 >
                   <span class="sr-only">Twitter</span>
-    
+
                   <ion-icon name="logo-twitter" class="text-2xl"></ion-icon>
                 </a>
               </li>
-    
+
               <li>
                 <a
                   href="#"
@@ -418,87 +584,127 @@
                   class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
                 >
                   <span class="sr-only">GitHub</span>
-    
+
                   <ion-icon name="logo-github" class="text-2xl"></ion-icon>
                 </a>
               </li>
             </ul>
-            <p class="mt-4 text-xs inline-block hover:text-secondary duration-300">Desenvolvido por <a href="https://github.com/lucasdaniellopes?tab=repositories" class="font-bold">Lucas Daniel Lopes Brasileiro</a></p>
+            <p
+              class="mt-4 inline-block text-xs duration-300 hover:text-secondary"
+            >
+              Desenvolvido por
+              <a
+                href="https://github.com/lucasdaniellopes?tab=repositories"
+                class="font-bold"
+                >Lucas Daniel Lopes Brasileiro</a
+              >
+            </p>
           </div>
-    
-          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4">
+
+          <div
+            class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:col-span-2 lg:grid-cols-4"
+          >
             <div>
               <p class="font-medium text-gray-900 dark:text-white">Serviços</p>
-    
+
               <ul class="mt-6 space-y-4 text-sm">
                 <li>
-                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     1on1 Coaching
                   </a>
                 </li>
-    
+
                 <li>
-                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     Contas League of Legends
                   </a>
                 </li>
-    
+
                 <li>
-                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     Contas Valorant
                   </a>
                 </li>
-    
+
                 <li>
-                  <a href="https://presenteslol.com/index.php" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="https://presenteslol.com/index.php"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     Presentes LoL
                   </a>
                 </li>
               </ul>
             </div>
-    
+
             <div>
               <p class="font-medium text-gray-900 dark:text-white">Empresa</p>
-    
+
               <ul class="mt-6 space-y-4 text-sm">
                 <li>
-                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     Sobre nós
                   </a>
                 </li>
+              </ul>
             </div>
-    
+
             <div>
-              <p class="font-medium text-gray-900 dark:text-white">Precisa de ajuda?</p>
-    
+              <p class="font-medium text-gray-900 dark:text-white">
+                Precisa de ajuda?
+              </p>
+
               <ul class="mt-6 space-y-4 text-sm">
                 <li>
-                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     Contatos
                   </a>
                 </li>
-    
+
                 <li>
-                  <a href="#faq" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#faq"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     FAQs
                   </a>
                 </li>
-  
               </ul>
             </div>
-    
+
             <div>
               <p class="font-medium text-gray-900 dark:text-white">Legal</p>
-    
+
               <ul class="mt-6 space-y-4 text-sm">
                 <li>
-                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     Termos e condições
                   </a>
                 </li>
-    
+
                 <li>
-                  <a href="#" class="text-gray-700 transition hover:opacity-75 dark:text-gray-200">
+                  <a
+                    href="#"
+                    class="text-gray-700 transition hover:opacity-75 dark:text-gray-200"
+                  >
                     Política de Privacidade
                   </a>
                 </li>
@@ -506,7 +712,7 @@
             </div>
           </div>
         </div>
-    
+
         <p class="text-xs text-gray-500 dark:text-gray-400">
           &copy; 2024. Raccon Services. Todos os direitos reservados.
         </p>
@@ -515,29 +721,52 @@
 
     <section class="modal" id="modal">
       <div class="container mx-auto px-4 py-8 text-white">
-        <div class="modal-hidden fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-[2000]">
-          <div class="bg-primary rounded-xl shadow-lg w-[90%] sm:w-1/3 max-w-2xl">
-           
-            <div class="flex justify-between items-center border-b border-gray-200 p-4 ">
+        <div
+          class="modal-hidden fixed inset-0 z-[2000] flex items-center justify-center bg-gray-800 bg-opacity-75"
+        >
+          <div
+            class="w-[90%] max-w-2xl rounded-xl bg-primary shadow-lg sm:w-1/3"
+          >
+            <div
+              class="flex items-center justify-between border-b border-gray-200 p-4"
+            >
               <h2 class="text-xl font-bold">Venha para o nosso Discord!</h2>
-              <button class="hover:text-secondary duration-500 focus:outline-none" onclick="closeModal()">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              <button
+                class="duration-500 hover:text-secondary focus:outline-none"
+                onclick="closeModal()"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M6 18L18 6M6 6l12 12"
+                  ></path>
                 </svg>
               </button>
             </div>
-            
-            <div class="p-4 flex flex-col items-center gap-4 text-justify">
-              <div class="modal-img w-[128px]">
-                <img src="../assets/ostTuIZ.png" alt="">
-              </div>
-              <p class="text-center font-semibold">Entre no nosso discord para ter a chance de ganhar uma skin épica totalmente grátis! E várias outras coisas!</p>
 
-              <div class="bg-secondary/50 hover:bg-secondary duration-500 cursor-pointer text-white px-4 py-2 rounded-lg flex justify-center items-center gap-2 font-bold">
+            <div class="flex flex-col items-center gap-4 p-4 text-justify">
+              <div class="modal-img w-[128px]">
+                <img src="../assets/ostTuIZ.png" alt="" />
+              </div>
+              <p class="text-center font-semibold">
+                Entre no nosso discord para ter a chance de ganhar uma skin
+                épica totalmente grátis! E várias outras coisas!
+              </p>
+
+              <div
+                class="flex cursor-pointer items-center justify-center gap-2 rounded-lg bg-secondary/50 px-4 py-2 font-bold text-white duration-500 hover:bg-secondary"
+              >
                 <a href="https://discord.gg/raccoonsmurfs">Discord</a>
                 <ion-icon name="logo-discord" class="text-3xl"></ion-icon>
               </div>
-              
             </div>
           </div>
         </div>
